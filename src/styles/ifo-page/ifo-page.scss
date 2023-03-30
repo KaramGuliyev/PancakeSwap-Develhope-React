@@ -64,7 +64,7 @@
   &-top__banner {
     margin-bottom: 8px;
     .ifo-banner-container {
-      background-image: url('../../assets/ifo-banner-dark.png');
+      background-image: url('~/public/assets/ifo-banner-dark.png');
       background-position: center top, center center;
       background-repeat: no-repeat;
       background-size: auto 100%;
@@ -659,7 +659,7 @@
             background-position: center center;
             border-top-left-radius: 32px;
             border-top-right-radius: 32px;
-            background-image: url('../../assets/arena-bg.png');
+            background-image: url('~/public/assets/arena-bg.png');
             border-radius: 32px 32px 0 0;
             padding: 24px;
             @media screen and (min-width: 852px) {
@@ -1466,7 +1466,7 @@
     &::before {
       display: inline-flex;
       content: '';
-      background: url('../../assets/tooltip-arrow.svg') no-repeat;
+      background: url('~/public/assets/tooltip-arrow.svg') no-repeat;
       width: 100%;
       height: 20px;
       position: absolute;

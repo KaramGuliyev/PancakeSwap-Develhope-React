@@ -1040,7 +1040,8 @@
                             .size-changer {
                                 button {
                                     img {
-                                        content: url("/assets/swapChartCloseBtn.svg");
+                                        content: url("~/public/assets/swapChartCloseBtn.svg");
+                                        // FIX THIS BUG
                                     }
                                 }
                             }
@@ -1051,14 +1052,3 @@
         }
     }
 }
-
-// @include root.media('laptop-lg') {
-//     .swap {
-//         .main-content {
-//             .graph-card {
-//                 .card-box {
-//                 }
-//             }
-//         }
-//     }
-// }
