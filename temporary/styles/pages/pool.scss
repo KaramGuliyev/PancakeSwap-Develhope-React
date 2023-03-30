@@ -1,0 +1,496 @@
+@import '../variables.scss';
+@import './button.scss';
+
+.poolsPageWrapper {
+  background-color: black;
+  box-sizing: content-box;
+  width: 100%;
+  margin-top: 56px;
+  .poolsNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-font-smoothing: antialiased;
+    height: 42px;
+    background-color: #1e1c23;
+    padding: 1rem;
+    .buttonWrapper {
+      display: flex;
+      margin-top: 6px;
+      a {
+        margin-right: 25px;
+        width: 100%;
+        padding: 12px 4px 6px 4px;
+
+        &:hover {
+          box-sizing: border-box;
+          background-color: rgb(53, 53, 71);
+        }
+      }
+      .farms {
+        width: 76.125px;
+        a:link {
+          margin-left: 5px;
+          width: 100%;
+          color: rgb(184, 173, 210);
+        }
+      }
+      .pools {
+        position: relative;
+
+        a:link {
+          width: 49.40625px;
+          height: 38px;
+          color: rgb(154, 106, 255);
+          -webkit-font-smoothing: antialiased;
+          font-weight: 600;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: -5.69px;
+          left: 0px;
+          height: 4px;
+          width: 49px;
+          background-color: $colors-primary;
+          border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          border-bottom-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+        }
+      }
+    }
+  }
+  .poolsHeader {
+    height: 202px;
+    background-image: linear-gradient(139.73deg, rgb(49, 61, 92), rgb(61, 42, 84));
+    .headerContents {
+      max-width: 1200px;
+      max-height: 202px;
+      padding: 32px 24px 32px 24px;
+      margin: 0 auto;
+      .headerTitle {
+        line-height: 1.1;
+        position: relative;
+        width: 100%;
+        color: $colors-secondary;
+        margin-bottom: 24px;
+        font-size: 64px;
+        font-weight: 600;
+      }
+      .headerDesc {
+        color: white;
+        line-height: 22px;
+        font-size: 20px;
+        font-stretch: normal;
+        font-style: normal;
+        font-variant-caps: normal;
+        font-weight: 600;
+      }
+    }
+  }
+  .poolsWrapper {
+    max-width: 1200px;
+    height: 892.5px;
+    min-height: 330px;
+    padding: 32px 24px 32px 24px;
+    margin: 0 auto;
+    position: relative;
+    .poolsContainerNav {
+      max-width: 1200px;
+      height: 90px;
+      max-height: 202px;
+      padding: 16px 32px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      .poolsContainerLeftWrapper,
+      .poolsContainerRightWrapper {
+        margin: 36px 0 22px 8px;
+        display: flex;
+        flex-direction: row;
+      }
+      .poolsContainerLeftWrapper {
+        .viewList {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 64px;
+          height: 32px;
+          svg {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+            opacity: 1;
+            transition: 350ms;
+          }
+
+          .active {
+            fill: $colors-primary;
+          }
+        }
+
+        .liveOrFinished {
+          display: flex;
+          align-items: center;
+          margin: 0 16px;
+          .liveOrFinishedWrapper {
+            width: 163px;
+            height: 32px;
+            border-radius: 16px;
+            background-color: $colors-input;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .live {
+              display: flex;
+              align-items: center;
+              font-family: inherit;
+              font-size: 16px;
+              font-weight: 600;
+              width: 64px;
+              height: 32px;
+              padding: 0px 16px;
+              border-radius: 16px;
+              background-color: $colors-textSubtle;
+              color: $colors-backgroundAlt;
+            }
+            .finished {
+              @extend .live;
+              background-color: $colors-input;
+              color: $colors-textSubtle;
+            }
+          }
+        }
+      }
+      .poolsContainerRightWrapper {
+        .dropdown {
+          width: 168px;
+          height: 58px;
+          display: flex;
+          flex-direction: column;
+          .dropdownTitle {
+            font-size: 12px;
+            font-weight: 600;
+            color: $colors-textSubtle;
+          }
+          .dropdownField {
+            display: flex;
+            align-items: center;
+            .activeDropdown {
+              margin-left: 16px;
+            }
+            width: 100%;
+            height: 100%;
+            background-color: rgb(55, 47, 71);
+            border-radius: 16px;
+            position: relative;
+            color: white;
+            .dropdownSymbol {
+              color: white;
+              position: absolute;
+              right: 10px;
+              top: 10px;
+            }
+          }
+        }
+        .search {
+          .searchTitle {
+            margin-left: 16px;
+
+            font-size: 12px;
+            font-weight: 600;
+            color: $colors-textSubtle;
+          }
+          .searchField {
+            margin-left: 16px;
+            width: 234px;
+            height: 40px;
+            background-color: rgb(55, 47, 71);
+            border: 0;
+            border-radius: 16px;
+            position: relative;
+            font-family: Kanit, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: $colors-textSubtle;
+            .searchSymbol {
+              position: absolute;
+              right: 0px;
+              top: 10px;
+            }
+          }
+          .searchField:focus {
+            border: 0;
+            outline: none;
+          }
+          .searchField::placeholder {
+            color: $colors-textSubtle;
+          }
+        }
+      }
+    }
+    .poolsContainer {
+      max-width: 1152px;
+      padding: 1px 1px 3px 1px;
+      background-color: $colors-backgroundAlt;
+      height: 538px;
+      border-radius: 24px;
+      .border {
+        border: 1px solid white;
+      }
+      .row {
+        height: 88px;
+        display: flex;
+        border-bottom: 2px solid $colors-poolsTableBorder;
+        .border {
+          border: 1px solid whhite;
+        }
+        .column1 {
+          .imgContainer {
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+            position: relative;
+            .coinImg {
+              width: 37px;
+              height: 37px;
+            }
+            .cycle {
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+            }
+          }
+          .desc {
+            display: flex;
+            flex-direction: column;
+            .header {
+              line-height: 1;
+              color: $colors-text;
+              font-weight: 600;
+              font-size: 16px;
+            }
+            .headerDesc {
+              line-height: 1;
+              font-size: 12px;
+              color: $colors-textSubtle;
+            }
+          }
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: 150px;
+          display: flex;
+          color: black;
+          padding: 24px 8px 24px 32px;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          flex-direction: row;
+        }
+        .column3 {
+          display: flex;
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: 120px;
+          color: black;
+          padding: 24px 8px;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          .desc {
+            margin-top: -3px;
+            display: flex;
+            flex-direction: column;
+            .header {
+              line-height: 1;
+              color: $colors-textSubtle;
+              font-weight: 400;
+              font-size: 12px;
+            }
+            .headerDesc {
+              line-height: 1;
+              font-size: 12px;
+              color: $colors-textSubtle;
+              .subMainDesc {
+                margin: 4px 0;
+                color: $colors-textDisabled;
+                font-size: 16px;
+                font-weight: 400;
+              }
+              .subDesc {
+                color: $colors-textDisabled;
+                font-size: 12px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        .column4 {
+          padding: 24px 8px;
+          color: black;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          flex-grow: 2;
+          flex-shrink: 0;
+          flex-basis: 100px;
+          .desc {
+            margin-top: -3px;
+            display: flex;
+            flex-direction: column;
+            .header {
+              margin: 2px 0 -2px 0;
+              line-height: 1;
+              color: $colors-textSubtle;
+              font-weight: 400;
+              font-size: 12px;
+            }
+            .headerDesc {
+              display: flex;
+              line-height: 1;
+              font-size: 12px;
+              color: $colors-textSubtle;
+              transition: 350ms;
+              &:hover {
+                opacity: 0.65;
+              }
+              .subMainDesc {
+                margin: 4px 0;
+                color: $colors-text;
+                font-size: 16px;
+                font-weight: 400;
+              }
+              .descImg {
+                margin-left: 4px;
+              }
+            }
+          }
+        }
+        .column5 {
+          color: black;
+          padding: 24px 8px;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: 120px;
+          .desc {
+            margin-top: -3px;
+            display: flex;
+            flex-direction: column;
+            .header {
+              margin: 2px 0 -2px 0;
+              line-height: 1;
+              color: $colors-textSubtle;
+              font-weight: 400;
+              font-size: 12px;
+            }
+            .headerDesc {
+              display: flex;
+              line-height: 1;
+              font-size: 12px;
+              color: $colors-textSubtle;
+              transition: 350ms;
+              &:hover {
+                opacity: 0.65;
+              }
+              .subMainDesc {
+                margin: 4px 0;
+                color: $colors-text;
+                font-size: 16px;
+                font-weight: 400;
+              }
+              .descImg {
+                margin-left: 4px;
+              }
+            }
+          }
+        }
+        .column6 {
+          display: flex;
+          flex-grow: 2;
+          flex-shrink: 0;
+          flex-basis: 100px;
+          color: black;
+          padding: 24px 8px;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          .desc {
+            margin-top: -3px;
+            display: flex;
+            flex-direction: column;
+            .header {
+              margin: 2px 0 -2px 0;
+              line-height: 1;
+              color: $colors-textSubtle;
+              font-weight: 400;
+              font-size: 12px;
+            }
+            .headerDesc {
+              display: flex;
+              line-height: 1;
+              font-size: 12px;
+              color: $colors-textSubtle;
+              transition: 350ms;
+              &:hover {
+                opacity: 0.65;
+              }
+              .subMainDesc {
+                margin: 4px 0;
+                color: $colors-text;
+                font-size: 16px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        .column7 {
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 120px;
+          padding: 24px 32px 24px 8px;
+
+          .desc {
+            width: 100%;
+            height: 100%;
+            flex-direction: row;
+            -webkit-box-pack: end;
+            justify-content: flex-end;
+            -webkit-box-align: center;
+            align-items: center;
+            vertical-align: baseline;
+            display: flex;
+            line-height: 24px;
+            font-weight: 600;
+            line-height: 1.5;
+            font-size: 16px;
+            color: $colors-primary;
+            .headerDesc {
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+    .poolsFooter {
+      max-height: 184.5px;
+      max-width: 192px;
+      position: relative;
+      width: 100%;
+      margin: 12px auto 0 auto;
+      img {
+        width: 192px;
+        height: 184.5px;
+      }
+    }
+  }
+}

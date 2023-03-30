@@ -1,0 +1,401 @@
+@use '../atomic/root/root.scss';
+@import '../variables.scss';
+
+@keyframes pie {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(3px, 15px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes stonks {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(5px, 10px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes folder {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(6px, 5px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes sliderDown {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0px, 80px);
+        opacity: 0;
+    }
+}
+
+@keyframes sliderUp {
+    0% {
+        transform: translate(0px, 80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.fifthSection {
+    background: $colors-gradientCardHeader;
+    padding: 96px 24px;
+    position: relative;
+    overflow: hidden;
+
+
+    .svg {
+        position: absolute;
+        width: 150%;
+        top: 0;
+        left: 0;
+        display: flex;
+        max-height: 48px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .top {
+        display: flex;
+        justify-content: center;
+        height: 430px;
+        width: 100%;
+
+        .images {
+            position: relative;
+            height: 100%;
+            width: 430px;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+
+            .first, .second, .third {
+                position: absolute;
+                animation-duration: 3s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
+            }
+
+            .first {
+                animation-name: stonks;
+                animation-delay: 650ms;
+            }
+
+            .second {
+                animation-name: pie;
+                animation-delay: 1s;
+            }
+
+            .third {
+                animation-name: folder;
+                animation-delay: 350ms;
+            }
+        }
+
+        .content {
+            margin-left: 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .title {
+                max-width: 430px;
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 1.1;
+                color: $colors-text;
+
+                span {
+                    color: $colors-secondary;
+                }
+            }
+
+            .text {
+                max-width: 430px;
+                margin: 24px 0;
+                color: $colors-textSubtle;
+            }
+
+            .btn_link {
+                display: flex;
+                align-items: center;
+
+                button {
+                    width: 107px;
+                    height: 48px;
+                    background-color: $colors-primary;
+                    border: none;
+                    border-radius: 16px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    font-family: inherit;
+                    letter-spacing: 0.5px;
+                    color: #120b21;
+                    box-shadow: #0e0e2c66 0px -1px 0px 0px inset;
+                    transition: 0.2s;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #2496a5;
+                    }
+
+                    &:active {
+                        transform: translate(0px, 1px);
+                        transition: inherit;
+                    }
+                }
+
+                a {
+                    margin-left: 16px;
+                    text-decoration: none;
+                    color: $colors-primary;
+                    font-weight: 600;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        max-width: 950px;
+        margin: auto;
+        
+        #title52 {
+            visibility: hidden;
+        }
+
+        .title{
+            font-size: 20px;
+            font-weight: 600;
+            color: $colors-text;
+            margin: 24px 0;
+            position: relative;
+
+            .first-title {
+                display: flex;
+                align-items: center;
+            }
+
+            .second-title {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                top: 0px;
+            }
+
+            span {
+                color: $colors-secondary;
+            }
+
+            .button {
+                height: 24px;
+                
+                button {
+                    background: none;
+                    width: 48px;
+                    height: 24px;
+                    border: none;
+                    padding-top: 2px;
+                    fill: $colors-textSubtle;
+                    cursor: pointer;
+
+                    &:hover {
+                        fill: #8c84a3;
+                    }
+                }
+            }           
+        }
+
+        .columns {
+            position: relative;
+
+            .first-line {
+                animation-duration: 0.4s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+
+            .second-line {
+                position: absolute;
+                top: 0px;
+                width: 100%;
+                opacity: 0;
+                animation-duration: 0.4s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+            
+            .lines {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .last {
+                max-width: none;
+                width: auto;
+                margin-right: 0px;
+            }
+
+            .column {
+                border-left: 1px solid #211b2c;
+                padding-left: 16px;
+                height: 80px;
+                width: 100%;
+                max-width: 250px;
+                margin-right: 10px;
+
+                &:first-child {
+                    border: none;
+                    padding: 0;
+                }
+
+                p {
+                    &:nth-child(1) {
+                        font-size: 12px;
+                        color: $colors-secondary;
+                        font-weight: 600;    
+                        line-height: 1.5;      
+                        margin-bottom: 8px;        
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 1.1;
+                        color: $colors-text;
+                    }
+
+                    &:nth-child(3) {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        color: $colors-textSubtle;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include root.media('laptop') {
+    .fifthSection {
+        .top {
+            .content {
+                .title {
+                    font-size: 32px;
+                }
+            }
+        }  
+    }
+}
+
+@include root.media('tablet') {
+    .fifthSection {
+        padding: 80px 24px;
+        position: relative;
+        .top {
+            flex-direction: column;
+            justify-content: flex-end;
+            height: auto;
+
+            .content {
+                margin: 0;
+                
+                .title {
+                    max-width: none;
+                }
+
+                .text {
+                    max-width: none;
+                }
+            }
+            .images {
+                width: 192px;
+                height: 192px;
+                margin-left: auto;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@include root.media('mobile') {
+    .fifthSection {
+        padding: 64px 16px;
+        .bottom {
+            .columns{
+                .lines {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: 
+                    "arena squad"
+                    "krs 0"
+                    "mgp wmx";
+    
+                    .column {
+                        border: none;
+                        padding: 0;
+                    }
+    
+                    .arena, .stake {
+                        grid-area: arena;
+                    }
+    
+                    .squad, .xcad {
+                        grid-area: squad;
+                    }
+    
+                    .krs, .zbc {
+                        grid-area: krs;
+                    }
+    
+                    .wmx, .primal {
+                        grid-area: wmx;
+                    }
+    
+                    .mgp, .champ  {
+                        grid-area: mgp;
+                    }
+                }
+                .first-line {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: 
+                    "arena squad"
+                    "krs 0"
+                    "mgp wmx";
+                }
+            }      
+        }
+    }
+}
