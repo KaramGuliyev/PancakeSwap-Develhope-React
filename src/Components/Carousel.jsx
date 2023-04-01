@@ -1,12 +1,10 @@
 import React from 'react'
-import '../styles/style.scss'
-import '../styles/carousel/index.scss'
+import '../Styles/style.scss'
+import '../Styles/carousel/index.scss'
 import { useEffect } from 'react'
 
 export default function Carousel() {
-
   let carouselInvetval = null
-
 
   let carouselBtn = document.getElementsByClassName('carouselNavButton')
   let sliders = document.getElementsByClassName('slider')

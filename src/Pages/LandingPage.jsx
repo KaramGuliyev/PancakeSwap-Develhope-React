@@ -1,7 +1,8 @@
 import React from 'react'
-import Carousel from './Components/Carousel'
-import Header from './Components/Header'
-import Footer from './Components/Footer'
+import Header from '../Layouts/Header'
+import Carousel from '../Components/Carousel'
+import Footer from '../Layouts/Footer'
+
 
 export default function LandingPage() {
   return (
