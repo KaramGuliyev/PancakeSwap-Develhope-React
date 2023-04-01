@@ -1,8 +1,65 @@
 import React from 'react'
 import '../styles/style.scss'
 import '../styles/carousel/index.scss'
+import { useEffect } from 'react'
 
 export default function Carousel() {
+
+  let carouselInvetval = null
+
+
+  let carouselBtn = document.getElementsByClassName('carouselNavButton')
+  let sliders = document.getElementsByClassName('slider')
+
+  const handleChange = (e) => {
+    if (carouselBtn[e - 1].classList.contains('active')) {
+    } else if (e === '1' && !carouselBtn[e - 1].classList.contains('active')) {
+      setNewActiveButton(e)
+    } else if (!sliders[e - 1].classList.contains('active')) {
+      setNewActiveButton(e)
+    }
+  }
+
+
+  function handleInterval(id) {
+    let i = id
+    return (carouselInvetval = setInterval(() => {
+      i++
+      if (i === 4) {
+        i = 1
+      }
+      setNewActiveButton(i)
+    }, 5000))
+  }
+
+  useEffect(() => {
+    let startID = Array.from(carouselBtn).filter((element) => element.classList.contains('active'))[0].id
+    handleInterval(startID)
+    for (let i = 0; i < carouselBtn.length; i++) {
+      const element = carouselBtn[i]
+      element.addEventListener('click', (e) => {
+        clearInterval(carouselInvetval)
+        handleInterval(e.target.id)
+        handleChange(e.target.id, sliders)
+      })
+    }
+  }, [])
+
+  const setNewActiveButton = (e) => {
+    for (let i = 0; i < carouselBtn.length; i++) {
+      const element = carouselBtn[i]
+      element.classList.remove('active')
+    }
+    for (let i = 0; i < sliders.length; i++) {
+      const element = sliders[i]
+      element.removeAttribute('style')
+    }
+    setTimeout(() => {
+      sliders[e - 1].setAttribute('style', 'opacity:1;')
+      carouselBtn[e - 1].classList.add('active')
+    }, 10)
+  }
+
   return (
     <div className="carousel">
       <div className="carouselWrapper">
@@ -26,13 +83,13 @@ export default function Carousel() {
         <div className="slider secondSlider" id="2" style={{ opacity: 0 }}>
           <div className="contents">
             <h2>
-              <img src="/assets/carousel/AptosXPancakeSwap.png" alt="" srcset="" />
+              <img src="/assets/carousel/AptosXPancakeSwap.png" alt="" srcSet="" />
             </h2>
             <div className="carouselTitle">Hello Aptos Project Teams!</div>
             <a href="#">
               <button className="buttonDesc">
                 👋 Get in Touch
-                <img src="/assets/carousel/share.svg" alt="" srcset="" />
+                <img src="/assets/carousel/share.svg" alt="" srcSet="" />
               </button>
             </a>
           </div>

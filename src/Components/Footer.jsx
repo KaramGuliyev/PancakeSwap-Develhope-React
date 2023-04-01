@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <div className="footer">
-      <div class="footer-main">
-        <div class="footer-logo-mobile">
+      <div className="footer-main">
+        <div className="footer-logo-mobile">
           <img src="./assets//pancake-swap-footer.svg" alt="" />
         </div>
-        <div class="footer-top">
-          <ul class="footer-top-links">
+        <div className="footer-top">
+          <ul className="footer-top-links">
             <li>About</li>
             <li>
-              <Link class="active">Contact</Link>
+              <Link className="active">Contact</Link>
             </li>
             <li>
               <Link>Brand</Link>
@@ -27,7 +27,7 @@ function Footer() {
               <Link>Litepaper</Link>
             </li>
           </ul>
-          <ul class="footer-top-links">
+          <ul className="footer-top-links">
             <li>Help</li>
             <li>
               <Link>Customer Support</Link>
@@ -39,7 +39,7 @@ function Footer() {
               <Link>Guides</Link>
             </li>
           </ul>
-          <ul class="footer-top-links">
+          <ul className="footer-top-links">
             <li>Developers</li>
             <li>
               <Link>Github</Link>
@@ -57,52 +57,52 @@ function Footer() {
               <Link>Careers</Link>
             </li>
           </ul>
-          <div class="footer-top-logo-desktop">
+          <div className="footer-top-logo-desktop">
             <img src="./assets//pancake-swap-footer.svg" alt="" />
           </div>
         </div>
 
-        <div class="footer-middle">
-          <Link class="footer-middle-link">
+        <div className="footer-middle">
+          <Link className="footer-middle-link">
             <img src="./assets/twitter.svg" alt="Twitter" />
           </Link>
-          <Link class="footer-middle-link">
+          <Link className="footer-middle-link">
             <img src="./assets/telegram.svg" alt="Telegram" />
           </Link>
-          <Link class="footer-middle-link">
+          <Link className="footer-middle-link">
             <img src="./assets/reddit.svg" alt="Reddit" />
           </Link>
-          <Link class="footer-middle-link">
+          <Link className="footer-middle-link">
             <img src="./assets/instagram.svg" alt="Instagram" />
           </Link>
-          <Link class="footer-middle-link">
+          <Link className="footer-middle-link">
             <img src="./assets/github.svg" alt="Github" />
           </Link>
-          <Link class="footer-middle-link">
+          <Link className="footer-middle-link">
             <img src="./assets/discord.svg" alt="Discord" />
           </Link>
-          <Link class="footer-middle-link">
+          <Link className="footer-middle-link">
             <img src="./assets/medium.svg" alt="Medium" />
           </Link>
-          <Link class="footer-middle-link">
+          <Link className="footer-middle-link">
             <img src="./assets/youtube.svg" alt="Youtube" />
           </Link>
         </div>
 
-        <div class="footer-bottom">
-          <div class="footer-bottom-left">
-            <div class="theme-select">
-              <div class="theme-select-outer appear">
-                <div class="theme-select-inner">
+        <div className="footer-bottom">
+          <div className="footer-bottom-left">
+            <div className="theme-select">
+              <div className="theme-select-outer appear">
+                <div className="theme-select-inner">
                   <input type="checkbox" />
-                  <div class="selected-theme">
+                  <div className="selected-theme">
                     <div>
                       <div>
                         <img src="./assets/dark-theme.svg" alt="" />
                       </div>
                     </div>
                   </div>
-                  <div class="theme-selection-options">
+                  <div className="theme-selection-options">
                     <img src="./assets/light-theme.svg" alt="" />
                     <img src="./assets/dark-theme.svg" alt="" />
                   </div>
@@ -110,30 +110,30 @@ function Footer() {
               </div>
             </div>
 
-            <div class="lang-select">
-              <button class="lang-select-btn">
+            <div className="lang-select">
+              <button className="lang-select-btn">
                 <img src="./assets/navGlobe.svg" alt="" />
                 <div>EN</div>
               </button>
-              <div class="lang-select-content">
-                <button class="lang-item">English</button>
-                <button class="lang-item">Türkçe</button>
-                <button class="lang-item">German</button>
-                <button class="lang-item">Italian</button>
-                <button class="lang-item">Italian</button>
-                <button class="lang-item">Italian</button>
-                <button class="lang-item">Bahasa Indonesia</button>
+              <div className="lang-select-content">
+                <button className="lang-item">English</button>
+                <button className="lang-item">Türkçe</button>
+                <button className="lang-item">German</button>
+                <button className="lang-item">Italian</button>
+                <button className="lang-item">Italian</button>
+                <button className="lang-item">Italian</button>
+                <button className="lang-item">Bahasa Indonesia</button>
               </div>
             </div>
           </div>
-          <div class="footer-bottom-right">
-            <div class="currency-price">
+          <div className="footer-bottom-right">
+            <div className="currency-price">
               <Link>
                 <img src="./assets/bunny-logo.svg" alt="" />
-                <div class="text-currency">$3.367</div>
+                <div className="text-currency">$3.367</div>
               </Link>
             </div>
-            <Link class="buy-btn">
+            <Link className="buy-btn">
               Buy CAKE <img src="./assets/right-arrow.svg" alt="" />
             </Link>
           </div>
