@@ -12,7 +12,6 @@ import Swap from "./Pages/Swap";
 import { loadScript } from "./utils";
 
 // Styles
-import "../styles/carousel/index.scss";
 
 function App() {
   useEffect(() => {
