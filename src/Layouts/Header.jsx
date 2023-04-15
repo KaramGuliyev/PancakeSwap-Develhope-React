@@ -1,17 +1,6 @@
-import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { loadScript } from '../utils'
 
 function Header() {
-  // useEffect(() => {
-  //   // load javascript after component loads
-  //   let script = loadScript('scripts/header-footer.js')
-  //   return () => {
-  //     // unload js after component unloads
-  //     document.head.removeChild(script)
-  //   }
-  // }, [])
-
   return (
     <>
       <div className="nav top">
@@ -26,22 +15,20 @@ function Header() {
             <div className="header-left__links">
               <div className="link-1">
                 <div className="link-head">
-
-                  <Link to="swap">Trade</Link>
+                  <Link to="/swap">Trade</Link>
                 </div>
                 <div className="link-content">
                   <div>
                     <Link to="/swap">Swap</Link>
-
                   </div>
                   <div>
                     <Link to="/limit">Limit</Link>
                   </div>
                   <div>
-                    <Link to="liquidity">Liquidity</Link>
+                    <Link to="/liquidity">Liquidity</Link>
                   </div>
                   <div>
-                    <Link to="perpetual">
+                    <Link to="/perpetual">
                       Perpetual
                       <div className="enter-icon">
                         <img src="./assets/enter.svg" alt="" />
@@ -49,7 +36,7 @@ function Header() {
                     </Link>
                   </div>
                   <div>
-                    <Link to="bridge">
+                    <Link to="/bridge">
                       Bridge
                       <div className="enter-icon">
                         <img src="./assets/enter.svg" alt="" />
@@ -60,79 +47,79 @@ function Header() {
               </div>
               <div className="link-2">
                 <div className="link-head">
-                  <Link to="earn">Earn</Link>
+                  <Link to="/earn">Earn</Link>
                 </div>
                 <div className="link-content">
                   <div>
-                    <Link to="farms">Farms</Link>
+                    <Link to="/farms">Farms</Link>
                   </div>
                   <div>
-                    <Link to="pools">Pools</Link>
+                    <Link to="/pools">Pools</Link>
                   </div>
                 </div>
               </div>
               <div className="link-3">
                 <div className="link-head">
-                  <Link to="win">Win</Link>
+                  <Link to="/win">Win</Link>
                 </div>
                 <div className="link-content">
                   <div>
-                    <Link to="competition">Trading Competition</Link>
+                    <Link to="/competition">Trading Competition</Link>
                   </div>
                   <div>
-                    <Link to="prediction">Prediction (BETA)</Link>
+                    <Link to="/prediction">Prediction (BETA)</Link>
                   </div>
                   <div>
-                    <Link to="lottery">Lottery</Link>
+                    <Link to="/lottery">Lottery</Link>
                   </div>
                   <div>
-                    <Link to="pottery">Pottery (BETA)</Link>
+                    <Link to="/pottery">Pottery (BETA)</Link>
                   </div>
                 </div>
               </div>
               <div className="link-4">
                 <div className="link-head">
-                  <Link to="nfts">NFT</Link>
+                  <Link to="/nfts">NFT</Link>
                 </div>
                 <div className="link-content">
                   <div>
-                    <Link to="nfts">Overview</Link>
+                    <Link to="/nfts">Overview</Link>
                   </div>
                   <div>
-                    <Link to="nfts/collections">Collections</Link>
+                    <Link to="/nfts/collections">Collections</Link>
                   </div>
                   <div>
-                    <Link to="nfts/activity">Activity</Link>
+                    <Link to="/nfts/activity">Activity</Link>
                   </div>
                 </div>
               </div>
               <div className="link-5">
                 <div className="link-head">
-                  <Link to="info">
+                  <Link to="/info">
                     <img src="./assets/3dot.svg" alt="" />
                   </Link>
                 </div>
                 <div className="link-content">
                   <div>
-                    <Link to="info">Info</Link>
+                    <Link to="/info">Info</Link>
                   </div>
                   <div>
-                    <Link to="ifo">IFO</Link>
+                    <Link to="/ifo">IFO</Link>
                   </div>
                   <div>
-                    <Link to="voting">Voting</Link>
-                  </div>
-                  <div>
-                    <hr />
-                  </div>
-                  <div>
-                    <Link to="teams">Leaderboard</Link>
+                    <Link to="/voting">Voting</Link>
                   </div>
                   <div>
                     <hr />
                   </div>
                   <div>
-                    <Link to="blog">
+                    <Link to="/teams">Leaderboard</Link>
+                  </div>
+                  <div>
+                    <hr />
+                  </div>
+                  <div>
+                    <Link to="/blog">
                       Blog
                       <div className="enter-icon">
                         <img src="./assets/enter.svg" alt="" />
@@ -140,7 +127,7 @@ function Header() {
                     </Link>
                   </div>
                   <div>
-                    <Link to="docs">
+                    <Link to="/docs">
                       Docs
                       <div className="enter-icon">
                         <img src="./assets/enter.svg" alt="" />
@@ -153,7 +140,7 @@ function Header() {
           </div>
           <div className="header-right">
             <div className="currency-price">
-              <Link>
+              <Link to="/">
                 <img src="./assets/bunny-logo.svg" alt="" />
                 <div className="text-currency">$3.367</div>
               </Link>
@@ -220,7 +207,7 @@ function Header() {
       <div className="mobile-nav">
         <div className="mobile-nav-link">
           <span>
-            <Link>
+            <Link to="/trade">
               <div className="container">
                 <img className="mobile-nav-link-img" src="./assets/trade.svg" alt="" />
                 <span className="mobile-nav-link-text">Trade</span>
@@ -240,8 +227,8 @@ function Header() {
             </div>
           </span>
           <div className="mobile-nav-menu">
-            <Link>Farms</Link>
-            <Link to="./pools.html">Pools</Link>
+            <Link to="/farms">Farms</Link>
+            <Link to="/pools">Pools</Link>
           </div>
         </div>
         <div className="mobile-nav-btn">
@@ -254,10 +241,10 @@ function Header() {
             </button>
           </span>
           <div className="mobile-nav-menu">
-            <Link>Trading Competition</Link>
-            <Link>Prediction (BETA)</Link>
-            <Link>Lottery</Link>
-            <Link>Pottery (BETA)</Link>
+            <Link to="/competition">Trading Competition</Link>
+            <Link to="/prediction">Prediction (BETA)</Link>
+            <Link to="/lottery">Lottery</Link>
+            <Link to="/pottery">Pottery (BETA)</Link>
           </div>
         </div>
         <div className="mobile-nav-btn">
@@ -270,9 +257,9 @@ function Header() {
             </button>
           </span>
           <div className="mobile-nav-menu">
-            <Link>Overview</Link>
-            <Link>Collections</Link>
-            <Link>Activity</Link>
+            <Link to="/nfts">Overview</Link>
+            <Link to="/nfts/collections">Collections</Link>
+            <Link to="/nfts/activity">Activity</Link>
           </div>
         </div>
         <div className="mobile-nav-btn">
@@ -283,17 +270,17 @@ function Header() {
           </span>
 
           <div className="mobile-nav-menu">
-            <Link>IFO</Link>
-            <Link>Voting</Link>
+            <Link to="/ifo">IFO</Link>
+            <Link to="/voting">Voting</Link>
             <hr />
-            <Link>Leaderboard</Link>
+            <Link to="/leaderboard">Leaderboard</Link>
             <hr />
-            <Link>
+            <Link to="/blog">
               <div>
                 Blog <img src="./assets/enter.svg" alt="" />
               </div>
             </Link>
-            <Link>
+            <Link to="/docs">
               <div>
                 Docs <img src="./assets/enter.svg" alt="" />
               </div>
