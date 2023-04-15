@@ -16,11 +16,11 @@ function Header() {
             <div className="header-left__links">
               <div className="link-1">
                 <div className="link-head">
-                  <Link to="./swap.html">Trade</Link>
+                  <Link to="./swap">Trade</Link>
                 </div>
                 <div className="link-content">
                   <div>
-                    <Link to="./swap.html">Swap</Link>
+                    <Link to="./swap">Swap</Link>
                   </div>
                   <div>
                     <Link>Limit</Link>
