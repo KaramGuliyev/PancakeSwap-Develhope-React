@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { loadScript } from '../utils'
 
 function Header() {
+  // useEffect(() => {
+  //   // load javascript after component loads
+  //   let script = loadScript('scripts/header-footer.js')
+  //   return () => {
+  //     // unload js after component unloads
+  //     document.head.removeChild(script)
+  //   }
+  // }, [])
+
   return (
     <>
       <div className="nav top">
         <nav>
           <div className="header-left">
             <div className="header-left__logo">
-              <Link to="./index.html">
+              <Link to="/">
                 <img className="logo-desktop" src="./assets/logo.svg" alt="" />
                 <img className="logo-mobile" src="./assets/logo-mobile.svg" alt="" />
               </Link>
@@ -16,20 +26,22 @@ function Header() {
             <div className="header-left__links">
               <div className="link-1">
                 <div className="link-head">
-                  <Link to="./swap">Trade</Link>
+
+                  <Link to="swap">Trade</Link>
                 </div>
                 <div className="link-content">
                   <div>
-                    <Link to="./swap">Swap</Link>
+                    <Link to="/swap">Swap</Link>
+
                   </div>
                   <div>
-                    <Link>Limit</Link>
+                    <Link to="/limit">Limit</Link>
                   </div>
                   <div>
-                    <Link>Liquidity</Link>
+                    <Link to="liquidity">Liquidity</Link>
                   </div>
                   <div>
-                    <Link>
+                    <Link to="perpetual">
                       Perpetual
                       <div className="enter-icon">
                         <img src="./assets/enter.svg" alt="" />
@@ -37,7 +49,7 @@ function Header() {
                     </Link>
                   </div>
                   <div>
-                    <Link>
+                    <Link to="bridge">
                       Bridge
                       <div className="enter-icon">
                         <img src="./assets/enter.svg" alt="" />
@@ -48,79 +60,79 @@ function Header() {
               </div>
               <div className="link-2">
                 <div className="link-head">
-                  <Link>Earn</Link>
+                  <Link to="earn">Earn</Link>
                 </div>
                 <div className="link-content">
                   <div>
-                    <Link>Farms</Link>
+                    <Link to="farms">Farms</Link>
                   </div>
                   <div>
-                    <Link to="./pools.html">Pools</Link>
+                    <Link to="pools">Pools</Link>
                   </div>
                 </div>
               </div>
               <div className="link-3">
                 <div className="link-head">
-                  <Link>Win</Link>
+                  <Link to="win">Win</Link>
                 </div>
                 <div className="link-content">
                   <div>
-                    <Link>Trading Competition</Link>
+                    <Link to="competition">Trading Competition</Link>
                   </div>
                   <div>
-                    <Link>Prediction (BETA)</Link>
+                    <Link to="prediction">Prediction (BETA)</Link>
                   </div>
                   <div>
-                    <Link>Lottery</Link>
+                    <Link to="lottery">Lottery</Link>
                   </div>
                   <div>
-                    <Link>Pottery (BETA)</Link>
+                    <Link to="pottery">Pottery (BETA)</Link>
                   </div>
                 </div>
               </div>
               <div className="link-4">
                 <div className="link-head">
-                  <Link>NFT</Link>
+                  <Link to="nfts">NFT</Link>
                 </div>
                 <div className="link-content">
                   <div>
-                    <Link>Overview</Link>
+                    <Link to="nfts">Overview</Link>
                   </div>
                   <div>
-                    <Link>Collections</Link>
+                    <Link to="nfts/collections">Collections</Link>
                   </div>
                   <div>
-                    <Link>Activity</Link>
+                    <Link to="nfts/activity">Activity</Link>
                   </div>
                 </div>
               </div>
               <div className="link-5">
                 <div className="link-head">
-                  <Link>
+                  <Link to="info">
                     <img src="./assets/3dot.svg" alt="" />
                   </Link>
                 </div>
                 <div className="link-content">
                   <div>
-                    <Link>Info</Link>
+                    <Link to="info">Info</Link>
                   </div>
                   <div>
-                    <Link to="./ifo.html">IFO</Link>
+                    <Link to="ifo">IFO</Link>
                   </div>
                   <div>
-                    <Link>Voting</Link>
-                  </div>
-                  <div>
-                    <hr />
-                  </div>
-                  <div>
-                    <Link>Leaderboard</Link>
+                    <Link to="voting">Voting</Link>
                   </div>
                   <div>
                     <hr />
                   </div>
                   <div>
-                    <Link>
+                    <Link to="teams">Leaderboard</Link>
+                  </div>
+                  <div>
+                    <hr />
+                  </div>
+                  <div>
+                    <Link to="blog">
                       Blog
                       <div className="enter-icon">
                         <img src="./assets/enter.svg" alt="" />
@@ -128,7 +140,7 @@ function Header() {
                     </Link>
                   </div>
                   <div>
-                    <Link>
+                    <Link to="docs">
                       Docs
                       <div className="enter-icon">
                         <img src="./assets/enter.svg" alt="" />
