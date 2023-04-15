@@ -18,7 +18,7 @@ function Footer() {
         scrollToTop.setAttribute("class", "scrollToTop hidden");
         setTimeout(() => {
           scrollToTop.setAttribute("style", "display:none;");
-        }, 500);
+        }, 400);
       }
     });
 
