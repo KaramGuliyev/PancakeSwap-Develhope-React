@@ -1,19 +1,29 @@
-import { useEffect } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import LandingPage from './Pages/LandingPage'
-import Swap from './Pages/Swap'
-import { loadScript } from './utils'
-import IfoPage from './Pages/IfoPage'
+// React
+
+import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+
+// Pages
+import LandingPage from "./Pages/LandingPage";
+import IfoPage from "./Pages/IfoPage";
+import Swap from "./Pages/Swap";
+
+// Utils
+import { loadScript } from "./utils";
+
+// Styles
+import "../styles/carousel/index.scss";
+
 function App() {
   useEffect(() => {
     // load header footer script
-    var script = loadScript('scripts/header-footer.js')
+    var script = loadScript("scripts/header-footer.js");
 
     return () => {
       // unload js after component unloads
-      document.head.removeChild(script)
-    }
-  }, [])
+      document.head.removeChild(script);
+    };
+  }, []);
 
   return (
     <Routes>
@@ -21,7 +31,7 @@ function App() {
       <Route exact path="/swap" element={<Swap />} />
       <Route exact path="/ifo" element={<IfoPage />} />
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

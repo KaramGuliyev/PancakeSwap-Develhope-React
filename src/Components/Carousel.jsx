@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/style.scss";
-import "../styles/carousel/index.scss";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Carousel() {
-  const [timer, setTimer] = useState("");
-
   useEffect(() => {
     let carouselInvetval = null;
 
@@ -60,7 +57,7 @@ export default function Carousel() {
         const element = sliders[i];
         element.removeAttribute("style");
       }
-      const activeButtonTimer = setTimeout(() => {
+      setTimeout(() => {
         sliders[e - 1]?.setAttribute("style", "opacity:1;");
         carouselBtn[e - 1]?.classList.add("active");
       }, 10);
