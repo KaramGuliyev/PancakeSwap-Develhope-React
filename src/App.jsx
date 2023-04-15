@@ -10,6 +10,7 @@ import Swap from "./Pages/Swap";
 
 // Utils
 import { loadScript } from "./utils";
+import Pools from "./Pages/Pools";
 
 // Styles
 
@@ -27,6 +28,7 @@ function App() {
   return (
     <Routes>
       <Route exact path="/" element={<LandingPage />} />
+      <Route exact path="/pools" element={<Pools />} />
       <Route exact path="/swap" element={<Swap />} />
       <Route exact path="/ifo" element={<IfoPage />} />
     </Routes>

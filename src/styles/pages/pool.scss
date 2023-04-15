@@ -29,7 +29,7 @@
       }
       .farms {
         width: 76.125px;
-        a:link {
+        a {
           margin-left: 5px;
           width: 100%;
           color: rgb(184, 173, 210);
@@ -38,7 +38,7 @@
       .pools {
         position: relative;
 
-        a:link {
+        a {
           width: 49.40625px;
           height: 38px;
           color: rgb(154, 106, 255);
@@ -91,7 +91,6 @@
   }
   .poolsWrapper {
     max-width: 1200px;
-    height: 892.5px;
     min-height: 330px;
     padding: 32px 24px 32px 24px;
     margin: 0 auto;
@@ -237,7 +236,6 @@
       max-width: 1152px;
       padding: 1px 1px 3px 1px;
       background-color: $colors-backgroundAlt;
-      height: 538px;
       border-radius: 24px;
       .border {
         border: 1px solid white;
@@ -486,7 +484,7 @@
       max-width: 192px;
       position: relative;
       width: 100%;
-      margin: 12px auto 0 auto;
+      margin: 24px auto 0 auto;
       img {
         width: 192px;
         height: 184.5px;

@@ -146,6 +146,8 @@ document.querySelector('.overlay')?.addEventListener('click', (el) => {
 })
 
 /* Mobile Nav menu  end*/
+
+
 const tooltips = document.querySelectorAll('.tooltip')
 
 tooltips.forEach(function (tooltip) {
