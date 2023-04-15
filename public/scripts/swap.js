@@ -5,12 +5,16 @@ let yearBtn = document.getElementById("swap-graph-year");
 let coinsName = document.getElementById("swap-coins-name-p");
 let coinsName2 = document.getElementById("swap-coins-name-p2");
 let graphIcons = document.getElementById("swap-graph-icons");
-let iconsSwapBtn = document.getElementById("swap-coins-name-btn");
+let iconsSwapBtn = document.getElementById(
+  "swap-coins-name-btn"
+);
 let chartValue = document.getElementById("swap-coin-value");
 let chartData = document.getElementById("swap-chart-data");
 let chartTime = document.getElementById("swap-chart-time");
 let chartYear = document.getElementById("swap-chart-year");
-let chartPercent = document.getElementById("swap-coins-percent");
+let chartPercent = document.getElementById(
+  "swap-coins-percent"
+);
 let chart1 = document.getElementById("firstChart");
 let chart2 = document.getElementById("secondChart");
 let chart3 = document.getElementById("thirdChart");
@@ -19,22 +23,32 @@ let chart5 = document.getElementById("fifthChart");
 let chart6 = document.getElementById("sixthChart");
 let chart7 = document.getElementById("seventhChart");
 let chart8 = document.getElementById("eighthChart");
-let swapChartDiv = document.getElementById("swap-graph-chart-div");
+let swapChartDiv = document.getElementById(
+  "swap-graph-chart-div"
+);
 let swapChartBg = document.getElementById("graph-bg");
-let graphVisibilityBtn = document.getElementById("graph-visibility-btn");
+let graphVisibilityBtn = document.getElementById(
+  "graph-visibility-btn"
+);
 let cardBtn1Img = document.getElementById("card-btn1-img");
 let firstInput = document.getElementById("first-input");
 let secondInput = document.getElementById("second-input");
 let firstInput_p = document.getElementById("first-input-p");
 let secondInput_p = document.getElementById("second-input-p");
-let inputSwitchBtn = document.getElementById("input-switch-btn");
+let inputSwitchBtn = document.getElementById(
+  "input-switch-btn"
+);
 let titleInput1 = document.getElementById("title-input1");
 let titleInput2 = document.getElementById("title-input2");
 let arrowDown = document.getElementById("arrow-down");
 let lowRiskDiv = document.getElementById("low-risk-div");
-let swapSettingsBtn = document.getElementById("swap-settings-btn");
+let swapSettingsBtn = document.getElementById(
+  "swap-settings-btn"
+);
 let chartContainer = document.getElementById("container");
-let sizeChangerImg = document.getElementById("size-changer-img");
+let sizeChangerImg = document.getElementById(
+  "size-changer-img"
+);
 let swapSection = document.getElementById("swap-section");
 let contentFooter = document.getElementById("content-footer");
 
@@ -93,7 +107,12 @@ const horizontalArbitraryLine = {
     } = chart;
     ctx.save();
     ctx.strokeStyle = "#32e9b4";
-    ctx.strokeRect(left, chart.getDatasetMeta(0).data[24].y, width, 0);
+    ctx.strokeRect(
+      left,
+      chart.getDatasetMeta(0).data[24].y,
+      width,
+      0
+    );
     ctx.setLineDash([2, 3]);
   },
 };
@@ -126,7 +145,8 @@ const hoverValue = {
       // console.log(chart)
 
       if (coinsName.innerText == "BNB/CAKE") {
-        chartValue.innerText = data.datasets[0].data[active.index];
+        chartValue.innerText =
+          data.datasets[0].data[active.index];
       }
 
       if (act < 3) {
@@ -274,7 +294,11 @@ const hoverValue = {
             chartValue.innerText = "0.020";
           } else if (act == 2) {
             chartValue.innerText = "0.023";
-          } else if (act == 6 || act == 7 || (act < 19 && act > 14)) {
+          } else if (
+            act == 6 ||
+            act == 7 ||
+            (act < 19 && act > 14)
+          ) {
             chartValue.innerText = "0.014";
           } else if (act == 4 || act == 5 || act == 11) {
             chartValue.innerText = "0.015";
@@ -920,7 +944,10 @@ const config1 = {
   plugins: [hoverValue, myEventCatcher],
 };
 
-const firstChart = new Chart(document.getElementById("firstChart"), config1);
+const firstChart = new Chart(
+  document.getElementById("firstChart"),
+  config1
+);
 
 // -------------------------------------------------
 
@@ -1007,7 +1034,10 @@ const config2 = {
   plugins: [hoverValue, myEventCatcher],
 };
 
-const secondChart = new Chart(document.getElementById("secondChart"), config2);
+const secondChart = new Chart(
+  document.getElementById("secondChart"),
+  config2
+);
 
 // -------------------------------------------------
 
@@ -1096,7 +1126,10 @@ const config3 = {
   plugins: [hoverValue, myEventCatcher],
 };
 
-const thirdChart = new Chart(document.getElementById("thirdChart"), config3);
+const thirdChart = new Chart(
+  document.getElementById("thirdChart"),
+  config3
+);
 
 // -------------------------------------------------
 
@@ -1177,7 +1210,10 @@ const config4 = {
   plugins: [hoverValue, myEventCatcher],
 };
 
-const fourthChart = new Chart(document.getElementById("fourthChart"), config4);
+const fourthChart = new Chart(
+  document.getElementById("fourthChart"),
+  config4
+);
 
 // -------------------------------------------------
 
@@ -1213,9 +1249,10 @@ const data5 = {
     {
       label: "",
       data: [
-        23.35, 23.34, 23.34, 23.78, 23.78, 23.69, 23.68, 23.69, 23.69, 23.5,
-        23.49, 23.49, 23.58, 23.59, 23.56, 23.54, 23.56, 23.57, 23.6, 23.59,
-        23.6, 23.54, 23.55, 23.54, 22.91,
+        23.35, 23.34, 23.34, 23.78, 23.78, 23.69, 23.68, 23.69,
+        23.69, 23.5, 23.49, 23.49, 23.58, 23.59, 23.56, 23.54,
+        23.56, 23.57, 23.6, 23.59, 23.6, 23.54, 23.55, 23.54,
+        22.91,
       ],
       borderWidth: 1.5,
       borderColor: "#e9479d",
@@ -1266,7 +1303,10 @@ const config5 = {
   plugins: [hoverValue, myEventCatcher],
 };
 
-const fifthChart = new Chart(document.getElementById("fifthChart"), config5);
+const fifthChart = new Chart(
+  document.getElementById("fifthChart"),
+  config5
+);
 
 // -------------------------------------------------
 
@@ -1353,7 +1393,10 @@ const config6 = {
   plugins: [hoverValue, myEventCatcher],
 };
 
-const sixthChart = new Chart(document.getElementById("sixthChart"), config6);
+const sixthChart = new Chart(
+  document.getElementById("sixthChart"),
+  config6
+);
 
 // -------------------------------------------------
 
@@ -1526,7 +1569,10 @@ const config8 = {
   plugins: [hoverValue, myEventCatcher],
 };
 
-const eighthChart = new Chart(document.getElementById("eighthChart"), config8);
+const eighthChart = new Chart(
+  document.getElementById("eighthChart"),
+  config8
+);
 
 // -------------------------------------------------
 
@@ -1832,7 +1878,9 @@ secondInput.addEventListener("input", (el) => {
   }
 });
 
-let priceInfoBnbCake = document.getElementById("price-info-bnb-cake");
+let priceInfoBnbCake = document.getElementById(
+  "price-info-bnb-cake"
+);
 
 inputSwitchBtn.addEventListener("click", () => {
   if (titleInput1.style.order == "4") {
@@ -1850,9 +1898,15 @@ inputSwitchBtn.addEventListener("click", () => {
   }
 });
 
-let priceOfCoinsBtn = document.getElementById("price-of-coins-btn");
-let priceFirstCoin = document.getElementById("price-first-coin");
-let priceSecondCoin = document.getElementById("price-second-coin");
+let priceOfCoinsBtn = document.getElementById(
+  "price-of-coins-btn"
+);
+let priceFirstCoin = document.getElementById(
+  "price-first-coin"
+);
+let priceSecondCoin = document.getElementById(
+  "price-second-coin"
+);
 
 priceOfCoinsBtn.addEventListener("click", () => {
   if (priceFirstCoin.innerText == "1 CAKE") {
@@ -1894,7 +1948,16 @@ function toLargeChard() {
   gradient4.addColorStop(0, "#e9479d");
   gradient4.addColorStop(1, "#393440");
 
-  let dataArr = [data1, data2, data3, data4, data5, data6, data7, data8];
+  let dataArr = [
+    data1,
+    data2,
+    data3,
+    data4,
+    data5,
+    data6,
+    data7,
+    data8,
+  ];
 
   for (let i = 0; i < 4; i++) {
     dataArr[i].datasets[0].backgroundColor = gradient3;
@@ -1918,7 +1981,16 @@ function toSmallChart() {
   sizeChangerImg.src = "./assets/swap-size-button.svg";
   chartContainer.style.height = "340px";
 
-  let dataArr = [data1, data2, data3, data4, data5, data6, data7, data8];
+  let dataArr = [
+    data1,
+    data2,
+    data3,
+    data4,
+    data5,
+    data6,
+    data7,
+    data8,
+  ];
 
   for (let i = 0; i < 4; i++) {
     dataArr[i].datasets[0].backgroundColor = gradient1;
@@ -2067,7 +2139,16 @@ media2.addEventListener("change", ({ matches }) => {
     swapChartBg.style.height = "100vh";
 
     chartHeight = chartContainer.clientHeight - 32;
-    let dataArr = [data1, data2, data3, data4, data5, data6, data7, data8];
+    let dataArr = [
+      data1,
+      data2,
+      data3,
+      data4,
+      data5,
+      data6,
+      data7,
+      data8,
+    ];
 
     gradient3 = document
       .getElementById("firstChart")
@@ -2091,7 +2172,16 @@ media2.addEventListener("change", ({ matches }) => {
     }
   } else {
     chartHeight = chartContainer.clientHeight - 32;
-    let dataArr = [data1, data2, data3, data4, data5, data6, data7, data8];
+    let dataArr = [
+      data1,
+      data2,
+      data3,
+      data4,
+      data5,
+      data6,
+      data7,
+      data8,
+    ];
     gradient3 = document
       .getElementById("firstChart")
       .getContext("2d")
