@@ -1,19 +1,10 @@
-// React
-
-import { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
-
-// Pages
-import LandingPage from "./Pages/LandingPage";
-import IfoPage from "./Pages/IfoPage";
-import Swap from "./Pages/Swap";
-
-// Utils
-import { loadScript } from "./utils";
-import Pools from "./Pages/Pools";
-
-// Styles
-
+import { useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import LandingPage from './Pages/LandingPage'
+import Swap from './Pages/Swap'
+import { loadScript } from './utils'
+import IfoPage from './Pages/IfoPage'
+import Competition from './Pages/competition'
 function App() {
   useEffect(() => {
     // load header footer script
@@ -31,6 +22,7 @@ function App() {
       <Route exact path="/pools" element={<Pools />} />
       <Route exact path="/swap" element={<Swap />} />
       <Route exact path="/ifo" element={<IfoPage />} />
+      <Route exact path="/competition" element= {<Competition />} />
     </Routes>
   );
 }
