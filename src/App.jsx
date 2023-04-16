@@ -4,6 +4,7 @@ import LandingPage from './Pages/LandingPage'
 import Swap from './Pages/Swap'
 import { loadScript } from './utils'
 import IfoPage from './Pages/IfoPage'
+import Pools from './Pages/Pools'
 import Competition from './Pages/competition'
 function App() {
   useEffect(() => {
@@ -19,7 +20,7 @@ function App() {
   return (
     <Routes>
       <Route exact path="/" element={<LandingPage />} />
-      <Route exact path="/pools" element={<Pools />} />
+      <Route exact path="/pools" element={<Pools /> } />
       <Route exact path="/swap" element={<Swap />} />
       <Route exact path="/ifo" element={<IfoPage />} />
       <Route exact path="/competition" element= {<Competition />} />
