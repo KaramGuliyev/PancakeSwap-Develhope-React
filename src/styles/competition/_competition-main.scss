@@ -1,0 +1,25 @@
+.competition {
+    box-sizing: border-box;
+    margin-top: 57px;
+    position: relative;
+    display: flex;
+    max-width: 100vw;
+    flex-direction: column;
+    background: black;
+
+    &-top {
+        background-color: #191335;
+        padding-top: 0px;
+        position: relative;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        z-index: 0;
+        padding: 48px 0px;
+        &_section{
+            
+            
+        }
+    
+    }
+}
