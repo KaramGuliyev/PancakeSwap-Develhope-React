@@ -16,10 +16,111 @@
         align-items: center;
         z-index: 0;
         padding: 48px 0px;
-        &_section{
-            
-            
+
+        .MuLho {
+            position: absolute;
+            z-index: 2;
+            left: 30%;
+            top: 0px;
         }
-    
+        @media screen and (max-width: 852px) {
+            .MuLho {
+                left: 20%;
+            }
+        }
+        
+        .fpqqGR {
+            position: absolute;
+            z-index: 2;
+            right: 1%;
+            top: 10%;
+            width: 79px;
+        }
+
+        &_section{
+            padding-top: 28px;
+            min-height: auto;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            max-width: 1200px;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            
+            @media screen and (min-width: 968px) {
+                padding-top: 48px;
+                padding-bottom: 48px;
+            }
+            @media screen and (min-width: 576px) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            }
+            @media screen and (min-width: 370px) {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .competition-top-status{
+                width: fit-content;
+                height: fit-content;
+                background: linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+                border: 1px solid rgb(118, 69, 217);
+                box-sizing: border-box;
+                border-radius: 0px 0px 24px 24px;
+                padding: 16px 18px;
+                margin: -30px auto 50px;
+                justify-content: space-around;
+                display: flex;
+
+                @media screen and (min-width: 1080px) {
+                    flex-direction: column;
+                    margin: -38px 0px 0px 36px;
+                }
+                @media screen and (min-width: 576px) {
+                    padding: 16px 24px;
+                }
+
+                &_top {
+                    -webkit-box-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    justify-content: center;
+                    margin-right: 12px;
+                    display: flex;
+
+                    @media screen and (min-width: 1080px) {   
+                            margin-bottom: 16px;
+                            margin-right: 0px;                       
+                    }
+                    @media screen and (min-width: 576px) {                       
+                            margin-right: 24px;
+                            svg {
+                                height: 64px;
+                                width: 64px;
+                            }                      
+                    }
+
+            
+                    @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {
+                        .dPwWVs {
+                            filter: none !important;
+                        }
+                    }
+                    // svg className 
+                    .dPwWVs {
+                        align-self: center;
+                        fill: var(--colors-text);
+                        color: var(--colors-text);
+                        flex-shrink: 0;
+                    }
+                }
+                
+                &_bottom {
+
+                }
+            }
+        }
+
     }
 }
