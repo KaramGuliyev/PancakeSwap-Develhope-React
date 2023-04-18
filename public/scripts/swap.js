@@ -2020,6 +2020,43 @@ sizeChangerBtn.addEventListener("click", () => {
   }
 });
 
+let chartClosingBtn = document.getElementById("chart-closing-btn")
+
+chartClosingBtn.addEventListener("click", () => {
+  if (swapChartBg.style.visibility == "hidden") {
+    dataTransition("0.2s");
+    deleteBackground(dayBtn);
+    deleteBackground(weekBtn);
+    deleteBackground(monthBtn);
+    deleteBackground(yearBtn);
+    addBackground(dayBtn);
+    chartHidden();
+    coinsName.innerText = "BNB/CAKE";
+    coinsName2.innerText = "BNB/CAKE";
+    chart1.style.visibility = "visible";
+    chartPercent.innerText = "+0.441 (0.58%)";
+    chartPercent.style.color = "#32e9b4";
+    cardBtn1Img.src = "./assets/swap11.svg";
+    swapChartBg.style.visibility = "visible";
+    if (data1.datasets[0].backgroundColor == gradient1) {
+      swapChartBg.style.width = "50%";
+    } else {
+      swapChartBg.style.width = "100%";
+    }
+    chartValue.innerText = "77.09";
+    swapChartBg.classList.remove("chart-off");
+    swapChartBg.classList.add("chart-on");
+  } else if ((swapChartBg.style.visibility = "visible")) {
+    swapChartBg.classList.remove("chart-on");
+    swapChartBg.classList.add("chart-off");
+    swapChartBg.style.width = 0;
+    dataTransition("0s");
+    cardBtn1Img.src = "./assets/swap12.svg";
+    swapChartBg.style.visibility = "hidden";
+    chartHidden();
+  }
+})
+
 const media = matchMedia("(max-width: 1200px");
 
 const media2 = matchMedia("(max-width: 970px");

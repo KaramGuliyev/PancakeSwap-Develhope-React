@@ -94,6 +94,13 @@ function Swap() {
                         alt=""
                       />
                     </button>
+                    <button id="chart-closing-btn">
+                      <img
+                        id="chart-closing-img"
+                        src="./assets/swapChartCloseBtn.svg"
+                        alt=""
+                      />
+                    </button>
                   </div>
                 </div>
                 <div className="graph-info">
