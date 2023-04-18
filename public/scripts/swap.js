@@ -1746,6 +1746,8 @@ function dataTransition(a) {
   weekBtn.style.transition = a;
   monthBtn.style.transition = a;
   yearBtn.style.transition = a;
+  iconsSwapBtn.style.transition = a;
+  sizeChangerBtn.style.transition = a;
 }
 
 graphVisibilityBtn.addEventListener("click", () => {
@@ -1811,6 +1813,7 @@ function whenInputEmpty() {
     graphCard.style.height = "calc(100% - 108px)";
     swapSection.style.height = "calc(100vh - 57px)";
   }
+  swapSection.style.height = "calc(100vh - 57px)";
   cardBox.style.height = "589px";
   calcBox.style.height = "436px";
   calcContent.style.height = "352px";
@@ -1918,10 +1921,13 @@ priceOfCoinsBtn.addEventListener("click", () => {
   }
 });
 
+let MC = mainContent.clientHeight
+console.log(MC)
+
 function toLargeChard() {
   graphCard.style.height = "100%";
   graphCard.style.width = "100%";
-  swapChartBg.style.height = "100%";
+  swapChartBg.style.height = `${MC}px`;
   swapChartBg.style.width = "100%";
   swapChartBg.style.borderRadius = "0px";
   mainContent.style.padding = "0px";
