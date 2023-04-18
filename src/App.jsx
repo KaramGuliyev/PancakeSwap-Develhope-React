@@ -12,6 +12,7 @@ import Teams from "./Pages/Teams";
 // Utils
 import { loadScript } from "./utils";
 import Pools from "./Pages/Pools";
+import Info from "./Pages/Info";
 
 // Styles
 
@@ -33,6 +34,7 @@ function App() {
       <Route exact path="/swap" element={<Swap />} />
       <Route exact path="/ifo" element={<IfoPage />} />
       <Route exact path="/teams" element={<Teams />} />
+      <Route exact path="/info" element={<Info />} />
     </Routes>
   );
 }
