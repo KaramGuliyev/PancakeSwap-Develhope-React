@@ -83,14 +83,14 @@ let chartHeight = chartContainer.clientHeight - 32;
 
 let a = 300;
 
-gradient1 = document
+let gradient1 = document
   .getElementById("firstChart")
   .getContext("2d")
   .createLinearGradient(0, 0, 0, chartHeight);
 gradient1.addColorStop(0, "#32e9b4");
 gradient1.addColorStop(1, "#393440");
 
-gradient2 = document
+let gradient2 = document
   .getElementById("fourthChart")
   .getContext("2d")
   .createLinearGradient(0, 0, 0, chartHeight);
@@ -1940,14 +1940,14 @@ function toLargeChard() {
   sizeChangerImg.src = "./assets/swapChartSizeChanger.svg";
   chartHeight = chartContainer.clientHeight - 32;
 
-  gradient3 = document
+  let gradient3 = document
     .getElementById("firstChart")
     .getContext("2d")
     .createLinearGradient(0, 0, 0, chartHeight);
   gradient3.addColorStop(0, "#32e9b4");
   gradient3.addColorStop(1, "#393440");
 
-  gradient4 = document
+  let gradient4 = document
     .getElementById("firstChart")
     .getContext("2d")
     .createLinearGradient(0, 0, 0, chartHeight);
@@ -2156,14 +2156,14 @@ media2.addEventListener("change", ({ matches }) => {
       data8,
     ];
 
-    gradient3 = document
+    let gradient3 = document
       .getElementById("firstChart")
       .getContext("2d")
       .createLinearGradient(0, 0, 0, chartHeight);
     gradient3.addColorStop(0, "#32e9b4");
     gradient3.addColorStop(1, "#393440");
 
-    gradient4 = document
+    let gradient4 = document
       .getElementById("firstChart")
       .getContext("2d")
       .createLinearGradient(0, 0, 0, chartHeight);
@@ -2188,14 +2188,14 @@ media2.addEventListener("change", ({ matches }) => {
       data7,
       data8,
     ];
-    gradient3 = document
+    let gradient3 = document
       .getElementById("firstChart")
       .getContext("2d")
       .createLinearGradient(0, 0, 0, chartHeight);
     gradient3.addColorStop(0, "#32e9b4");
     gradient3.addColorStop(1, "#393440");
 
-    gradient4 = document
+    let gradient4 = document
       .getElementById("firstChart")
       .getContext("2d")
       .createLinearGradient(0, 0, 0, chartHeight);
