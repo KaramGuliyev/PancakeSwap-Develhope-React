@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function InfoBody() {
   return (
@@ -29,7 +30,9 @@ export default function InfoBody() {
               <div class="topLeftRightImg">
                 <img src="./assets/56.png" alt="" />
               </div>
-              <div class="topLeftRightHeader">BNB Smart Chain</div>
+              <div class="topLeftRightHeader">
+                BNB Smart Chain
+              </div>
               <div class="topLeftRightSvg">
                 <svg
                   viewBox="0 0 24 24"
