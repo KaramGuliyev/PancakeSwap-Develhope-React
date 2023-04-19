@@ -34,6 +34,7 @@ function App() {
       <Route exact path="/pools" element={<Pools /> } />
       <Route exact path="/swap" element={<Swap />} />
       <Route exact path="/ifo" element={<IfoPage />} />
+      <Route exact path="/info" element={<Info />} />
       <Route exact path="/teams" element={<Teams />} />
       <Route exact path="/competition" element={<Competition />} />
     </Routes>
