@@ -45,6 +45,8 @@ Hakan TUNCER
 <a href="https://www.linkedin.com/in/hakan-tuncer-402436179/" target="_blank">LinkedIn</a>
 
 <br>
+
+
 Gabriel KRYEMADHI
 <br>
 <br>
@@ -52,12 +54,13 @@ Gabriel KRYEMADHI
 <br>
 <a href="https://www.linkedin.com/in/gabriel-kryemadhi/" target="_blank">LinkedIn</a>
 
+
 <br>
-Hakan TUNCER
+Rasam Rabiee
 <br>
 <br>
-<a style="color:black; text-decoration:underline;" href="https://github.com/hakantuncer">GitHUB</a>
+<a style="color:black; text-decoration:underline;" href="https://github.com/cyberRasam">GitHUB</a>
 <br>
-<a href="https://www.linkedin.com/in/hakan-tuncer-402436179/" target="_blank">LinkedIn</a>
+<a href="www.linkedin.com/in/rasam-rabiee" target="_blank">LinkedIn</a>
 
 <br>
