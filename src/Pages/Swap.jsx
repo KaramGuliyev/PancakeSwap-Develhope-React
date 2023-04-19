@@ -3,7 +3,31 @@ import { loadScript } from "../utils.js";
 import Header from "../Layouts/Header.jsx";
 import Footer from "../Layouts/Footer.jsx";
 
+// function isMyScriptLoaded(url) {
+//   if (!url) url = "";
+//   var scripts = document.getElementsByTagName('script');
+//   for (var i = scripts.length; i--;) {
+//       if (scripts[i].src == url) return true;
+//   }
+//   return false;
+// }
+
 function Swap() {
+//   useEffect(() => {
+//     console.log(!isMyScriptLoaded("scripts/swap.js"))
+//     if (!isMyScriptLoaded("scripts/swap.js")) {
+//       console.log("loading script")
+//       let script = loadScript("scripts/swap.js");
+//     }
+//     // load javascript after component loads
+//     return () => {
+//       // // unload js after component unloads
+//       // console.log("unloading script")
+//       // document.head.removeChild(script);
+//     };
+//   }, []);
+
+
   useEffect(() => {
     // load javascript after component loads
     let script = loadScript("scripts/swap.js");
@@ -67,6 +91,13 @@ function Swap() {
                       <img
                         id="size-changer-img"
                         src="./assets/swap-size-button.svg"
+                        alt=""
+                      />
+                    </button>
+                    <button id="chart-closing-btn">
+                      <img
+                        id="chart-closing-img"
+                        src="./assets/swapChartCloseBtn.svg"
                         alt=""
                       />
                     </button>

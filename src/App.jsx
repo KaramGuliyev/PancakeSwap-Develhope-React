@@ -13,6 +13,7 @@ import Competition from './Pages/competition'
 // Utils
 import { loadScript } from "./utils";
 import Pools from "./Pages/Pools";
+import Info from "./Pages/Info";
 
 // Styles
 
