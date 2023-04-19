@@ -45,19 +45,22 @@ Hakan TUNCER
 <a href="https://www.linkedin.com/in/hakan-tuncer-402436179/" target="_blank">LinkedIn</a>
 
 <br>
+
+
+Gabriel KRYEMADHI
+<br>
+<br>
+<a style="color:black; text-decoration:underline;" href="https://github.com/gabrielkryemadhi">GitHUB</a>
+<br>
+<a href="https://www.linkedin.com/in/gabriel-kryemadhi/" target="_blank">LinkedIn</a>
+
+
+<br>
 Rasam Rabiee
 <br>
 <br>
 <a style="color:black; text-decoration:underline;" href="https://github.com/cyberRasam">GitHUB</a>
 <br>
 <a href="www.linkedin.com/in/rasam-rabiee" target="_blank">LinkedIn</a>
-
-<br>
-Hakan TUNCER
-<br>
-<br>
-<a style="color:black; text-decoration:underline;" href="https://github.com/hakantuncer">GitHUB</a>
-<br>
-<a href="https://www.linkedin.com/in/hakan-tuncer-402436179/" target="_blank">LinkedIn</a>
 
 <br>
