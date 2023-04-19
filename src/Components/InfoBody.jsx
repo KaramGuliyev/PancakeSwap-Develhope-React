@@ -14,7 +14,7 @@ export default function InfoBody() {
       </div>
       <div class="topConteiner">
         <div class="topInnerConteiner">
-          <div class="TopLeft">
+          <div class="topLeft">
             <div class="topLeftLeft">
               <Link href="#" class="active">
                 Overview
