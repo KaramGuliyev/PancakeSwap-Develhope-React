@@ -1010,6 +1010,18 @@
 @include root.media('laptop') {
     .swap {
         .main-content {
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .content-footer {
+                .link {
+                    #footer-left-link {
+                        margin: 0;
+                        margin-right: 5px;
+                    }
+                }
+            }
+
             .graph-card {
                 .graph-bg {
                     overflow: auto;

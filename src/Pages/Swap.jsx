@@ -2298,7 +2298,7 @@ function Swap() {
     });
     
     return () => {
-
+      console.log("unmounted")
     };
   }, []);
 
