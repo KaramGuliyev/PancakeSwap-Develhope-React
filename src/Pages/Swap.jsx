@@ -2,11 +2,25 @@ import { useEffect } from "react";
 import { loadScript } from "../utils.js";
 
 function Swap() {
+  //   useEffect(() => {
+  //     console.log(!isMyScriptLoaded("scripts/swap.js"))
+  //     if (!isMyScriptLoaded("scripts/swap.js")) {
+  //       console.log("loading script")
+  //       let script = loadScript("scripts/swap.js");
+  //     }
+  //     // load javascript after component loads
+  //     return () => {
+  //       // // unload js after component unloads
+  //       // console.log("unloading script")
+  //       // document.head.removeChild(script);
+  //     };
+  //   }, []);
+
   useEffect(() => {
     // load javascript after component loads
     let script = loadScript("scripts/swap.js");
+    console.log(script);
     return () => {
-      // unload js after component unloads
       document.head.removeChild(script);
     };
   }, []);
@@ -433,7 +447,8 @@ function Swap() {
             </div>
             <div className="perpetual-link link">
               <a href="#">
-                Perpetual <img src="./assets/swap1.svg" alt="" />
+                Perpetual{" "}
+                <img src="./assets/swap1.svg" alt="" />
               </a>
             </div>
             <div className="bridge-link link">
@@ -449,16 +464,25 @@ function Swap() {
               <div className="graph" id="swap-graph-chart-div">
                 <div className="graph-top">
                   <div className="coins">
-                    <div className="icons" id="swap-graph-icons">
+                    <div
+                      className="icons"
+                      id="swap-graph-icons"
+                    >
                       <img src="./assets/swap9.svg" alt="" />
-                      <img src="./assets/swap-icon-rabbit.png" alt="" />
+                      <img
+                        src="./assets/swap-icon-rabbit.png"
+                        alt=""
+                      />
                     </div>
                     <div className="text">
                       <p id="swap-coins-name-p">BNB/CAKE</p>
                     </div>
                     <div className="swap-button">
                       <button id="swap-coins-name-btn">
-                        <img src="./assets/swap-button.svg" alt="" />
+                        <img
+                          src="./assets/swap-button.svg"
+                          alt=""
+                        />
                       </button>
                     </div>
                   </div>
@@ -482,14 +506,19 @@ function Swap() {
                         <p id="swap-coins-name-p2">BNB/CAKE</p>
                       </div>
                       <div className="exchange-percent">
-                        <p id="swap-coins-percent">+0.441 (0.58%)</p>
+                        <p id="swap-coins-percent">
+                          +0.441 (0.58%)
+                        </p>
                       </div>
                     </div>
                     <div className="content-bottom">
                       <p>
                         <span id="swap-chart-data">Mar 4</span>,{" "}
                         <span id="swap-chart-year">2023</span>,{" "}
-                        <span id="swap-chart-time">09:25 PM</span> (UTC)
+                        <span id="swap-chart-time">
+                          09:25 PM
+                        </span>{" "}
+                        (UTC)
                       </p>
                     </div>
                   </div>
@@ -610,19 +639,31 @@ function Swap() {
                     </div>
                   </div>
                   <div className="calc" id="calc-box">
-                    <div className="calc-content" id="calc-content">
-                      <div className="title-input1" id="title-input1">
+                    <div
+                      className="calc-content"
+                      id="calc-content"
+                    >
+                      <div
+                        className="title-input1"
+                        id="title-input1"
+                      >
                         <div className="calc-title1 calc-title">
                           <div className="title1-button title-button">
                             <button className="btn">
                               <div className="icon1 icon">
-                                <img src="./assets/swap9.svg" alt="" />
+                                <img
+                                  src="./assets/swap9.svg"
+                                  alt=""
+                                />
                               </div>
                               <div className="title">
                                 <p>BNB</p>
                               </div>
                               <div className="arrow">
-                                <img src="./assets/swap-arrow1.svg" alt="" />
+                                <img
+                                  src="./assets/swap-arrow1.svg"
+                                  alt=""
+                                />
                               </div>
                             </button>
                           </div>
@@ -650,7 +691,10 @@ function Swap() {
                           </div>
                         </div>
                       </div>
-                      <div className="arrow-down" id="arrow-down">
+                      <div
+                        className="arrow-down"
+                        id="arrow-down"
+                      >
                         <button id="input-switch-btn">
                           <svg
                             viewBox="0 0 24 24"
@@ -664,7 +708,10 @@ function Swap() {
                           </svg>
                         </button>
                       </div>
-                      <div className="title-input2" id="title-input2">
+                      <div
+                        className="title-input2"
+                        id="title-input2"
+                      >
                         <div className="calc-title2 calc-title">
                           <div className="title2-button title-button">
                             <button className="btn">
@@ -679,7 +726,10 @@ function Swap() {
                                 <p>CAKE</p>
                               </div>
                               <div className="arrow">
-                                <img src="./assets/swap-arrow1.svg" alt="" />
+                                <img
+                                  src="./assets/swap-arrow1.svg"
+                                  alt=""
+                                />
                               </div>
                             </button>
                             <div className="swap-copy">
@@ -721,24 +771,32 @@ function Swap() {
                           </div>
                         </div>
                       </div>
-                      <div className="low-risk-div" id="low-risk-div">
+                      <div
+                        className="low-risk-div"
+                        id="low-risk-div"
+                      >
                         <div className="low-risk">
                           <div className="low-risk-info">
                             <div className="low-risk-info-div"></div>
                             <div className="low-risk-info-text">
                               <p>
-                                Risk scan results are provided by a third party{" "}
+                                Risk scan results are provided
+                                by a third party{" "}
                                 <a>AvengerDAO</a>
                               </p>
                               <p>
-                                It is a tool for indicative purposes only to
-                                allow users to check the reference risk level of
-                                a BNB Chain Smart Contract. Please do your own
-                                research - interactions with any BNB Chain Smart
-                                Contract is at your own risk.
+                                It is a tool for indicative
+                                purposes only to allow users to
+                                check the reference risk level
+                                of a BNB Chain Smart Contract.
+                                Please do your own research -
+                                interactions with any BNB Chain
+                                Smart Contract is at your own
+                                risk.
                               </p>
                               <p>
-                                Learn more about risk rating <a>here.</a>
+                                Learn more about risk rating{" "}
+                                <a>here.</a>
                               </p>
                             </div>
                           </div>
@@ -746,7 +804,10 @@ function Swap() {
                             <p>Low Risk</p>
                           </div>
                           <div className="question-icon">
-                            <img src="./assets/swap10.svg" alt="" />
+                            <img
+                              src="./assets/swap10.svg"
+                              alt=""
+                            />
                           </div>
                         </div>
                       </div>
@@ -757,7 +818,9 @@ function Swap() {
                           </div>
                           <div className="icon-values">
                             <div className="first-coin">
-                              <p id="price-first-coin">1 CAKE</p>
+                              <p id="price-first-coin">
+                                1 CAKE
+                              </p>
                             </div>
                             <div className="arrow">
                               <svg
@@ -776,7 +839,9 @@ function Swap() {
                               </svg>
                             </div>
                             <div className="second-coin">
-                              <p id="price-second-coin">0.0131594 BNB</p>
+                              <p id="price-second-coin">
+                                0.0131594 BNB
+                              </p>
                             </div>
                             <div className="btn">
                               <button id="price-of-coins-btn">
@@ -888,7 +953,9 @@ function Swap() {
                         </svg>
                       </p>
                       <p className="right-side">
-                        <span id="price-info-bnb-cake">BNB - CAKE</span>
+                        <span id="price-info-bnb-cake">
+                          BNB - CAKE
+                        </span>
                         <svg
                           viewBox="0 0 24 24"
                           color="text"
