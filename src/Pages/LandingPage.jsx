@@ -7,6 +7,8 @@ import { FifthSection } from "../Components/FifthSection";
 import { SixthSection } from "../Components/SixthSection";
 import { SeventhSection } from "../Components/SeventhSection";
 import FirstSection from "../Components/FirstSection";
+import { ThirdSection } from "../Components/ThirdSection";
+import { EighthSection } from "../Components/EighthSection";
 
 export default function LandingPage() {
   return (
@@ -15,9 +17,11 @@ export default function LandingPage() {
       <Carousel />
       <FirstSection />
       <SecondSection />
+      <ThirdSection />
       <FifthSection />
       <SixthSection />
       <SeventhSection />
+      <EighthSection />
       <Footer />
     </>
   );
