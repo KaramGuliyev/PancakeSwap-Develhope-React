@@ -11,34 +11,89 @@
         background-color: #191335;
         padding-top: 0px;
         position: relative;
+        display: flex;
         flex-direction: column;
         -webkit-box-align: center;
         align-items: center;
         z-index: 0;
         padding: 48px 0px;
 
+        &-wapper{
+            @media screen and (min-width: 1920px) {
+                .hGSzSf {
+                    padding-top: 32px;
+                }
+            }
+            @media screen and (min-width: 1080px) {
+                .hGSzSf {
+                    padding-top: 10px;
+                    flex-direction: row-reverse;
+                    -webkit-box-pack: justify;
+                    justify-content: space-between;
+                }
+            }
+            .hGSzSf {
+                flex-direction: column;
+            }
+
+            .fOPopv {
+                display: flex;
+            }
+
+            .CSebQ {
+                margin-bottom: 48px;
+            }
+            .MuLho {
+                position: absolute;
+                z-index: 2;
+                left: 3%;
+                top: 0px;
+            }
+    
+            .fpqqGR {
+                position: absolute;
+                z-index: 1;
+                right: 1%;
+                top: 10%;
+                width: 79px;
+            }
+        }
+
         .MuLho {
             position: absolute;
             z-index: 2;
-            left: 30%;
+            left: 3%;
             top: 0px;
         }
-        @media screen and (max-width: 852px) {
-            .MuLho {
-                left: 20%;
-            }
-        }
-        
+
         .fpqqGR {
             position: absolute;
-            z-index: 2;
+            z-index: 1;
             right: 1%;
             top: 10%;
             width: 79px;
         }
 
+        @media screen and (min-width: 852px) {
+            .MuLho {
+                left: 20%;
+            }
+            .fpqqGR {
+                right: 21%;
+            }
+        }
+
+        @media screen and (min-width: 1080px) {
+            .fpqqGR {
+                right: 31%;
+            }
+            .MuLho {
+                left: 30%
+            }   
+        }
+        
         &_section{
-            padding-top: 28px;
+            margin-top: -58px; 
             min-height: auto;
             padding-top: 16px;
             padding-bottom: 16px;
@@ -47,18 +102,23 @@
             padding-right: 16px;
             margin-left: auto;
             margin-right: auto;
+
             
-            @media screen and (min-width: 968px) {
-                padding-top: 48px;
-                padding-bottom: 48px;
-            }
-            @media screen and (min-width: 576px) {
-            padding-top: 32px;
-            padding-bottom: 32px;
-            }
             @media screen and (min-width: 370px) {
+                margin-top: -45px;
                 padding-left: 24px;
                 padding-right: 24px;
+            }
+            @media screen and (min-width: 576px) {
+                margin-top: -30px;
+                min-width: auto;
+                padding-top: 16px;
+                padding-bottom: 16px;
+            }
+            @media screen and (min-width: 968px) {
+                margin-top: -60px;
+                padding-top: 48px;
+                padding-bottom: 48px;
             }
 
             .competition-top-status{
@@ -72,10 +132,11 @@
                 margin: -30px auto 50px;
                 justify-content: space-around;
                 display: flex;
+                
 
                 @media screen and (min-width: 1080px) {
                     flex-direction: column;
-                    margin: -38px 0px 0px 36px;
+                    margin: -36px 0px 0px 36px;
                 }
                 @media screen and (min-width: 576px) {
                     padding: 16px 24px;
@@ -88,19 +149,21 @@
                     justify-content: center;
                     margin-right: 12px;
                     display: flex;
-
-                    @media screen and (min-width: 1080px) {   
-                            margin-bottom: 16px;
-                            margin-right: 0px;                       
-                    }
+                    svg {
+                        height: 58px;
+                        width: 58px;
+                    }    
                     @media screen and (min-width: 576px) {                       
-                            margin-right: 24px;
-                            svg {
+                        margin-right: 24px;
+                        svg {
                                 height: 64px;
                                 width: 64px;
-                            }                      
+                        }                      
                     }
-
+                    @media screen and (min-width: 1080px) {   
+                        margin-bottom: 16px;
+                        margin-right: 0px;                       
+                    }
             
                     @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {
                         .dPwWVs {
@@ -117,10 +180,315 @@
                 }
                 
                 &_bottom {
+                    display: flex;
+                    flex-direction: column;
+                    -webkit-box-pack: center;
+                    justify-content: center;
 
+                    .status-finished {
+                        display: flex;
+                        -webkit-box-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        margin-bottom: 24px;
+
+                        .finished-text {
+                            font-size: 14px;
+                            margin-right: 2px;
+                            font-weight: 600;
+                            line-height: 1.1;
+                            background-image: linear-gradient(180deg,#ffd800,#fdab32);
+                            background-clip: text;
+                            color: transparent;
+                            @media screen and (min-width: 576px) {
+                                    font-size: 24px;  
+                            }
+                            
+                        }
+                    }
+                    .status-bar{
+                        display: flex;
+
+                        .glmiyM {
+                            margin: 12px 8px 0px;
+                            background-color: #b8add2;
+                            height: 2px;
+                            border-radius: 4px;
+                        }
+                        @media screen and (min-width: 576px) {
+                            .glmiyM {
+                                width: 36px;
+                            }
+                        }
+                        
+                        &_entry {
+                            flex-direction: column;
+                            -webkit-box-align: center;
+                            align-items: center;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            display: flex;
+                            .gmlZTm svg {
+                                fill: #b8add2;
+                            }
+                            @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {
+                                .dPwWVs {
+                                    filter: none !important;
+                                }
+                            }
+                            .dPwWVs {
+                                align-self: center;
+                                fill: #b8add2;
+                                color: #b8add2;
+                                flex-shrink: 0;
+                            }
+                            .gbEVgR {
+                                margin-top: 4px;
+                                font-weight: 600;
+                                font-size: 12px;
+                            }
+                            
+                            .UFFDU {
+                                color: #b8add2;
+                                font-weight: 600;
+                                line-height: 1.5;
+                                text-transform: uppercase;
+                                font-size: 12px;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &_content {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            
+            .fopzU {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                height: 242px;
+                z-index: -1;
+                background-image: url(https://pancakeswap.finance/_next/static/media/mod-mesh.f35f83b0.png);
+            }
+            @media only screen and (min-width: 1920px) {
+                .fopzU {
+                    background-repeat: no-repeat;
+                    background-position: center bottom;
+                    background-size: 100%;
+                    }
+            }
+
+            .gNKYyC {
+                position: absolute;
+                bottom: 50px;
+                left: 5%;
+                width: 1257px;
+                height: 205px;
+                background-image: url(https://pancakeswap.finance/_next/static/media/MoD-bg-shine.b56df09c.png);
+                background-size: cover;
+                z-index: 0;
+            }
+            .fqKkFb {
+                position: relative;
+                z-index: 2;
+                width: 75%;
+                margin: 0px auto;
+            }
+            .mWAkw {
+                text-align: center;
+            }
+            .cKtOGL {
+                color: rgb(255, 213, 133);
+                font-weight: 600;
+                line-height: 1.5;
+                margin-bottom: 16px;
+                font-size: 16px;
+            }
+            .cFIwpy {
+                width: 100%;
+                position: relative;
+                white-space: normal;
+                text-align: center;
+            }
+
+            .loTPNn {
+                font-size: 48px;
+                white-space: nowrap;
+                text-align: center;
+                line-height: 110%;
+                color: rgb(255, 255, 255);
+                text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+                background: linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%) text;
+                -webkit-text-stroke: 4px transparent;
+            }
+            .csqZAq {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.1;
+            }
+            .ihXAEA {
+                color: #f4eeff;
+                font-weight: 600;
+                line-height: 1.5;
+                font-size: 16px;
+            }
+            
+            .dPwWVs {
+                align-self: center;
+                fill: #f4eeff;
+                color: #f4eeff;
+                flex-shrink: 0;
+            }
+
+            .geofjA {
+                position: relative;
+                top: -10px;
+                font-family: Kanit;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 46px;
+                line-height: 110%;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                font-feature-settings: "liga" 0;
+                color: rgb(255, 255, 255);
+                text-shadow: rgb(19, 16, 29) 0px 5px 0px;
+            }
+            .feHpdf {
+                position: absolute;
+                top: -25px;
+                left: -150px;
+                width: 599px;
+                height: 184px;
+                background-image: url(https://pancakeswap.finance/_next/static/media/mod-text-light.0459781b.png);
+                z-index: -1;
+            }
+
+            .leTTdr {
+                width: 100%;
+                white-space: initial;
+                text-shadow: rgba(0, 255, 209, 0.22) 0px 0px 10px, rgba(0, 56, 255, 0.25) 0px 0px 8px, rgba(0, 255, 71, 0.52) 0px 0px 18px;
+                text-align: center;
+                width: 410px;
+            }
+
+            .fDPXPG {
+                font-size: 32px;
+                white-space: nowrap;
+                text-align: center;
+                line-height: 110%;
+                color: white;
+                
+                background: text rgba(0, 255, 209, 0.22) 0px 0px 10px, rgba(0, 56, 255, 0.25) 0px 0px 8px, rgba(0, 255, 71, 0.52) 0px 0px 18px;
+            }
+
+            .jvBkPv {
+                text-align: center;
+                text-shadow: rgba(255, 255, 255, 0.25) 0px 0px 8px, rgba(161, 101, 194, 0.88) 0px 0px 18px, rgba(161, 0, 255, 0.55) 0px 0px 49px;
+                color: white;
+            }
+
+            .csqZAq {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.1;
+            }
+            .cVUhYs {
+                font-weight: 600;
+                line-height: 1.5;
+                margin-top: 16px;
+                font-size: 16px;
+            }
+
+            .fOPopv {
+                display: flex;
+            }
+            
+           
+            .ZmMmq {
+                height: 100px;
+            }
+
+            @media screen and (min-width: 576px) {
+                .loTPNn {
+                    font-size: 64px;
+                }
+                .fDPXPG {
+                    font-size: 40px;
+                }
+            }
+            @media screen and (min-width: 852px) {
+                .fqKkFb {
+                    position: absolute;
+                    width: auto;
+                    bottom: -3%;
+                    z-index: 1;
+                    right: 10px;
+                }
+                .mWAkw {
+                    text-align: left;
+                }
+                .cFIwpy {
+                    text-align: left;
+                }
+                .leTTdr {
+                    text-align: left;
+                }
+                .jvBkPv {
+                    text-align: left;
+                }
+            }
+            
+            @media screen and (min-width: 968px) {
+                .cFIwpy {
+                    width: 780px;
+                }
+                .leTTdr {
+                    width: 410px;
+                }
+                .csqZAq {
+                    font-size: 20px;
+                }
+            }
+
+            @media screen and (min-width: 1080px) {
+                .fqKkFb {
+                    right: 25px;
+                }
+            }
+            @media screen and (min-width: 1440px) {
+                .fqKkFb {
+                    right: 18%;
+                }
+            }
+
+            @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {
+                .dPwWVs {
+                    filter: none !important;
                 }
             }
         }
+        }
 
     }
+}
+
+
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 100%;
+    vertical-align: baseline;
 }
