@@ -45,12 +45,12 @@ Hakan TUNCER
 <a href="https://www.linkedin.com/in/hakan-tuncer-402436179/" target="_blank">LinkedIn</a>
 
 <br>
-Hakan TUNCER
+Gabriel KRYEMADHI
 <br>
 <br>
-<a style="color:black; text-decoration:underline;" href="https://github.com/hakantuncer">GitHUB</a>
+<a style="color:black; text-decoration:underline;" href="https://github.com/gabrielkryemadhi">GitHUB</a>
 <br>
-<a href="https://www.linkedin.com/in/hakan-tuncer-402436179/" target="_blank">LinkedIn</a>
+<a href="https://www.linkedin.com/in/gabriel-kryemadhi/" target="_blank">LinkedIn</a>
 
 <br>
 Hakan TUNCER
