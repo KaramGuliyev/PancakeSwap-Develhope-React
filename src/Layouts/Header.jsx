@@ -107,7 +107,7 @@ function Header() {
                     <Link to="/ifo">IFO</Link>
                   </div>
                   <div>
-                    <Link to="/voting">Voting</Link>
+                    <Link to="/teams">Teams</Link>
                   </div>
                   <div>
                     <hr />
