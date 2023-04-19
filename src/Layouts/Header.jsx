@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <>
-      <div className="nav top">
+      <div className="nav top" style={{zIndex:"999999"}}>
         <nav>
           <div className="header-left">
             <div className="header-left__logo">
