@@ -61,6 +61,6 @@ Rasam Rabiee
 <br>
 <a style="color:black; text-decoration:underline;" href="https://github.com/cyberRasam">GitHUB</a>
 <br>
-<a href="www.linkedin.com/in/rasam-rabiee" target="_blank">LinkedIn</a>
+<a href="https://www.linkedin.com/in/rasam-rabiee" target="_blank">LinkedIn</a>
 
 <br>
