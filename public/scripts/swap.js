@@ -83,14 +83,14 @@ let chartHeight = chartContainer.clientHeight - 32;
 
 let a = 300;
 
-gradient1 = document
+let gradient1 = document
   .getElementById("firstChart")
   .getContext("2d")
   .createLinearGradient(0, 0, 0, chartHeight);
 gradient1.addColorStop(0, "#32e9b4");
 gradient1.addColorStop(1, "#393440");
 
-gradient2 = document
+let gradient2 = document
   .getElementById("fourthChart")
   .getContext("2d")
   .createLinearGradient(0, 0, 0, chartHeight);
@@ -1746,6 +1746,8 @@ function dataTransition(a) {
   weekBtn.style.transition = a;
   monthBtn.style.transition = a;
   yearBtn.style.transition = a;
+  iconsSwapBtn.style.transition = a;
+  sizeChangerBtn.style.transition = a;
 }
 
 graphVisibilityBtn.addEventListener("click", () => {
@@ -1811,6 +1813,7 @@ function whenInputEmpty() {
     graphCard.style.height = "calc(100% - 108px)";
     swapSection.style.height = "calc(100vh - 57px)";
   }
+  swapSection.style.height = "calc(100vh - 57px)";
   cardBox.style.height = "589px";
   calcBox.style.height = "436px";
   calcContent.style.height = "352px";
@@ -1918,10 +1921,13 @@ priceOfCoinsBtn.addEventListener("click", () => {
   }
 });
 
+let MC = mainContent.clientHeight
+console.log(MC)
+
 function toLargeChard() {
   graphCard.style.height = "100%";
   graphCard.style.width = "100%";
-  swapChartBg.style.height = "100%";
+  swapChartBg.style.height = `${MC}px`;
   swapChartBg.style.width = "100%";
   swapChartBg.style.borderRadius = "0px";
   mainContent.style.padding = "0px";
@@ -1934,14 +1940,14 @@ function toLargeChard() {
   sizeChangerImg.src = "./assets/swapChartSizeChanger.svg";
   chartHeight = chartContainer.clientHeight - 32;
 
-  gradient3 = document
+  let gradient3 = document
     .getElementById("firstChart")
     .getContext("2d")
     .createLinearGradient(0, 0, 0, chartHeight);
   gradient3.addColorStop(0, "#32e9b4");
   gradient3.addColorStop(1, "#393440");
 
-  gradient4 = document
+  let gradient4 = document
     .getElementById("firstChart")
     .getContext("2d")
     .createLinearGradient(0, 0, 0, chartHeight);
@@ -2013,6 +2019,43 @@ sizeChangerBtn.addEventListener("click", () => {
     }
   }
 });
+
+let chartClosingBtn = document.getElementById("chart-closing-btn")
+
+chartClosingBtn.addEventListener("click", () => {
+  if (swapChartBg.style.visibility == "hidden") {
+    dataTransition("0.2s");
+    deleteBackground(dayBtn);
+    deleteBackground(weekBtn);
+    deleteBackground(monthBtn);
+    deleteBackground(yearBtn);
+    addBackground(dayBtn);
+    chartHidden();
+    coinsName.innerText = "BNB/CAKE";
+    coinsName2.innerText = "BNB/CAKE";
+    chart1.style.visibility = "visible";
+    chartPercent.innerText = "+0.441 (0.58%)";
+    chartPercent.style.color = "#32e9b4";
+    cardBtn1Img.src = "./assets/swap11.svg";
+    swapChartBg.style.visibility = "visible";
+    if (data1.datasets[0].backgroundColor == gradient1) {
+      swapChartBg.style.width = "50%";
+    } else {
+      swapChartBg.style.width = "100%";
+    }
+    chartValue.innerText = "77.09";
+    swapChartBg.classList.remove("chart-off");
+    swapChartBg.classList.add("chart-on");
+  } else if ((swapChartBg.style.visibility = "visible")) {
+    swapChartBg.classList.remove("chart-on");
+    swapChartBg.classList.add("chart-off");
+    swapChartBg.style.width = 0;
+    dataTransition("0s");
+    cardBtn1Img.src = "./assets/swap12.svg";
+    swapChartBg.style.visibility = "hidden";
+    chartHidden();
+  }
+})
 
 const media = matchMedia("(max-width: 1200px");
 
@@ -2150,14 +2193,14 @@ media2.addEventListener("change", ({ matches }) => {
       data8,
     ];
 
-    gradient3 = document
+    let gradient3 = document
       .getElementById("firstChart")
       .getContext("2d")
       .createLinearGradient(0, 0, 0, chartHeight);
     gradient3.addColorStop(0, "#32e9b4");
     gradient3.addColorStop(1, "#393440");
 
-    gradient4 = document
+    let gradient4 = document
       .getElementById("firstChart")
       .getContext("2d")
       .createLinearGradient(0, 0, 0, chartHeight);
@@ -2182,14 +2225,14 @@ media2.addEventListener("change", ({ matches }) => {
       data7,
       data8,
     ];
-    gradient3 = document
+    let gradient3 = document
       .getElementById("firstChart")
       .getContext("2d")
       .createLinearGradient(0, 0, 0, chartHeight);
     gradient3.addColorStop(0, "#32e9b4");
     gradient3.addColorStop(1, "#393440");
 
-    gradient4 = document
+    let gradient4 = document
       .getElementById("firstChart")
       .getContext("2d")
       .createLinearGradient(0, 0, 0, chartHeight);
