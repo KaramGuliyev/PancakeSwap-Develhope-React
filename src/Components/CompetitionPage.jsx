@@ -13,10 +13,12 @@ function CompetitionPage() {
       accordionBtns[i].addEventListener("click", function () {
         this.classList.toggle("active");
         const content = accordionContents[i];
-        if (content.style.display === "grid") {
-          content.style.display = "none";
+        if (content.style.height === "100%") {
+          content.style.height = "0";
+          content.style.paddingBottom = "0"
         } else {
-          content.style.display = "grid";
+          content.style.height= "100%";
+          content.style.paddingBottom = "16px";
         }
       });
     }
@@ -183,97 +185,133 @@ function CompetitionPage() {
                             </div>
                           </div>
                         </div>
-                        <div class="right">
-                          <div class="right-container">
-                            <div class="title">
+                        <div className="rules-details">
+                          <div class="rules-right">
+                            <div class="rules-right-container">
+                              <div class="title">
                               <h2>Details</h2>
-                            </div>
-                            <div class="accordion-container">
-                              <div class="details-btn">
-                                <button class="accordion-btn">
-                                  <p>What’s the difference between a Public Sale and Private Sale?</p>
-                                  <div style={{display: "flex", "align-items": "center"}}>
-                                    <span>Details</span>
-                                    <img src="./assets/caret-down-blue.svg" alt="" srcset=""/>
+                              </div>
+                              <div className="accordions-box">
+                                <div class="accordion-container">
+                                  <div class="accordion-details">
+                                    <div font-weight="bold" color="text" font-size="16px" class="details-question">Eligible trading pairs</div>
+                                    <div className="details-btn">
+                                      <button class="accordion-btn" aria-label="Hide or show expandable content" scale="md">
+                                        Details
+                                        <svg viewBox="0 0 24 24" color="primary" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-231a1e38-0 cCdTkU"><path d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z"></path></svg>
+                                      </button>
                                     </div>
-                                  </button>
+                                  </div>
+                                  <div class="accordion-content" id="extra-content">
+                                    <p class="accordion-content-answer">Only trades on DAR/BNB, CAKE/BNB, and CAKE/BUSD pairs will be included in volume calculations. Please note that the volume from limit orders will not be included.</p>
+                                  </div>
                                 </div>
-                                <div class="accordion-content" id="extra-content">
-                                  <p>In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of CAKE up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has no participation fee.</p>
-                                  <p>In the Public Sale, everyone with an active PancakeSwap profile can commit. However the maximum amount of CAKE users can commit, is equal to the number of iCAKE they have.<br/>Learn more about iCAKE <a href="#">here</a> <br/>here And there’s a fee for participation: see below.</p>
-                                </div>
-                            </div>
-                            <div class="accordion-container">
-                                <div class="details-btn">
-                                  <button class="accordion-btn">
-                                    <p>Which sale should I commit to? Can I do both?</p>
-                                    <div style={{display: "flex", "align-items": "center"}}><span>Details</span>
-                                    <img src="./assets/caret-down-blue.svg" alt="" srcset=""/>
+                                <div class="accordion-container">
+                                  <div class="accordion-details">
+                                    <div font-weight="bold" color="text" font-size="16px" class="details-question">Calculating team ranks and winners</div>
+                                    <div className="details-btn">
+                                      <button class="accordion-btn" aria-label="Hide or show expandable content" scale="md">
+                                        Details
+                                        <svg viewBox="0 0 24 24" color="primary" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-231a1e38-0 cCdTkU"><path d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z"></path></svg>
+                                      </button>
                                     </div>
-                                  </button>
-                                </div>
-                                <div class="accordion-content" id="extra-content">
-                                  <p>You can choose one or both at the same time! We recommend you to check if you are eligible to participate in the Private Sale first. In the Public Sale, if the amount you commit is too small, you may not receive a meaningful amount of IFO tokens. <br/>Just remember you need an active PancakeSwap Profile in order to participate.</p>
-                                </div>
-                            </div>
-                            <div class="accordion-container">
-                              <div class="details-btn">
-                                <button class="accordion-btn">
-                                  <p>How much is the participation fee?</p>
-                                  <div style={{display: "flex", "align-items": "center"}}>
-                                    <span>Details</span>
-                                    <img src="./assets/caret-down-blue.svg" alt="" srcset=""/>
                                   </div>
-                                </button>
-                              </div>
-                              <div class="accordion-content" id="extra-content">
-                                <p>There’s only a participation fee for the Public Sale: there’s no fee for the Private Sale. The participation fee decreases in cliffs, based on the percentage of overflow from the “Public Sale” portion of the IFO. <br/>Note: Fees may vary between different IFOs. To learn more about the participation fees, please refer to the details in the IFO proposal (vote) for the specifics of the IFO you want to take part in.</p>
-                              </div>
-                            </div>
-                            <div class="accordion-container">
-                              <div class="details-btn">
-                                <button class="accordion-btn">
-                                  <p>Where does the participation fee go?</p>
-                                  <div style={{display: "flex", "align-items": "center"}}>
-                                    <span>Details</span>
-                                    <img src="./assets/caret-down-blue.svg" alt="" srcset=""/>
+                                  <div class="accordion-content" id="extra-content">
+                                    <p class="accordion-content-answer">- Team ranks are calculated by the total combined volume of the top 500 members of each respective team.<br/>
+                                      - The final winning team will be the team with the highest total volume score at the end of the competition period.</p>
                                   </div>
-                                </button>
-                              </div>
-                              <div class="accordion-content" id="extra-content">
-                                <p>The CAKE from the participation fee will be burnt as part of the weekly token burn.</p>
-                              </div>
-                            </div>
-                            <div class="accordion-container">
-                              <div class="details-btn">
-                                <button class="accordion-btn">
-                                  <p>How can I get an achievement for participating in the IFO?</p>
-                                  <div style={{display: "flex", "align-items": "center"}}>
-                                    <span>Details</span>
-                                    <img src="./assets/caret-down-blue.svg" alt="" srcset=""/>
-                                  </div>
-                                </button>
-                              </div>
-                              <div class="accordion-content" id="extra-content">
-                                <p>You need to contribute a minimum of about 10 USD worth of CAKE to either sale. You can contribute to one or both, it doesn’t matter: only your overall contribution is counted for the achievement.</p>
-                              </div>
-                            </div>
-                            <div class="accordion-container">
-                              <div class="details-btn"> 
-                              <button class="accordion-btn">
-                                <p>What is the difference between an IFO and a cIFO?</p>
-                                <div style={{display: "flex", "align-items": "center"}}>
-                                  <span>Details</span>
-                                  <img src="./assets/caret-down-blue.svg" alt="" srcset=""/>
                                 </div>
-                              </button>
-                            </div>
-                            <div class="accordion-content" id="extra-content">
-                              <p>cIFOs are a new subtype of IFOs, designed to reward our loyal community, and also introduce our community to projects with slightly smaller raises. <br/>Learn more about cIFO <a href="#">here</a></p>
+                                <div class="accordion-container">
+                                  <div class="accordion-details">
+                                    <div font-weight="bold" color="text" font-size="16px" class="details-question">Prize distribution</div>
+                                    <div className="details-btn">
+                                      <button class="accordion-btn" aria-label="Hide or show expandable content" scale="md">
+                                        Details
+                                        <svg viewBox="0 0 24 24" color="primary" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-231a1e38-0 cCdTkU"><path d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z"></path></svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-content" id="extra-content">
+                                    <p class="accordion-content-answer">- Prizes to be distributed in CAKE and DAR in a distribution of 1:5 and shared by all members of each respective tier.<br/>
+- The price of token prizes ($CAKE and $DAR) in USD will be determined as per their BUSD pair price during the tally period.<br/>
+- Every participant will win at least one prize at the end of the competition.</p>
+                                  </div>
+                                </div>
+                                <div class="accordion-container">
+                                  <div class="accordion-details">
+                                    <div font-weight="bold" color="text" font-size="16px" class="details-question">Fine print</div>
+                                    <div className="details-btn">
+                                      <button class="accordion-btn" aria-label="Hide or show expandable content" scale="md">
+                                        Details
+                                        <svg viewBox="0 0 24 24" color="primary" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-231a1e38-0 cCdTkU"><path d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z"></path></svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-content" id="extra-content">
+                                    <p class="accordion-content-answer">- In the event of a disagreement concerning the final winning team or rank, PancakeSwap will have the final say.<br/>
+- PancakeSwap can and will disqualify any team or specific members that are proven to have taken malicious action or attempt to “cheat” in any way.</p>
+                                  </div>
+                                </div>
+                                <div class="accordion-container">
+                                  <div class="accordion-details">
+                                    <div font-weight="bold" color="text" font-size="16px" class="details-question">Can I join the battle after it starts?</div>
+                                    <div className="details-btn">
+                                      <button class="accordion-btn" aria-label="Hide or show expandable content" scale="md">
+                                        Details
+                                        <svg viewBox="0 0 24 24" color="primary" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-231a1e38-0 cCdTkU"><path d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z"></path></svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-content" id="extra-content">
+                                    <p class="accordion-content-answer">Sorry, no. You need to register during the registration period, before the start of the event.</p>
+                                  </div>
+                                </div>
+                                <div class="accordion-container">
+                                  <div class="accordion-details">
+                                    <div font-weight="bold" color="text" font-size="16px" class="details-question">How do I know if I successfully registered?</div>
+                                    <div className="details-btn">
+                                      <button class="accordion-btn" aria-label="Hide or show expandable content" scale="md">
+                                        Details
+                                        <svg viewBox="0 0 24 24" color="primary" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-231a1e38-0 cCdTkU"><path d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z"></path></svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-content" id="extra-content">
+                                    <p class="accordion-content-answer">At the top of the page, the text in the button “I Want to Battle” will change to “Registered”.</p>
+                                  </div>
+                                </div>
+                                <div class="accordion-container">
+                                  <div class="accordion-details">
+                                    <div font-weight="bold" color="text" font-size="16px" class="details-question">How can I see my current rank?</div>
+                                    <div className="details-btn">
+                                      <button class="accordion-btn" aria-label="Hide or show expandable content" scale="md">
+                                        Details
+                                        <svg viewBox="0 0 24 24" color="primary" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-231a1e38-0 cCdTkU"><path d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z"></path></svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-content" id="extra-content">
+                                    <p class="accordion-content-answer">Check Your Score section on the event page. You’ll need to connect your wallet, of course.</p>
+                                  </div>
+                                </div>
+                                <div class="accordion-container">
+                                  <div class="accordion-details">
+                                    <div font-weight="bold" color="text" font-size="16px" class="details-question">How do I claim my prize(s)?</div>
+                                    <div className="details-btn">
+                                      <button class="accordion-btn" aria-label="Hide or show expandable content" scale="md">
+                                        Details
+                                        <svg viewBox="0 0 24 24" color="primary" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-231a1e38-0 cCdTkU"><path d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z"></path></svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="accordion-content" id="extra-content">
+                                    <p class="accordion-content-answer">After the battle ends, visit the event page and click the “Claim Prizes” button in the top section or in “Your Score” section. Once you claim your prizes successfully, the button text will change to “Prizes Claimed”.</p>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
                       </div>
                     </div>
                   </div>
