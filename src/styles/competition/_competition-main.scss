@@ -949,156 +949,310 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
             margin-bottom: 0px;
         }
 
-        &-content {
-            width: 100%;
+        &-wrapper {
             display: flex;
-            flex-direction: column;
-            &-teams {
-                display: flex;
-                height: 132px;
-                position: relative;
-                &-storm {
-                    position: absolute;
-                    bottom: -26px;
-                    left: 6px;
-                    @media screen and (min-width: 576px) {
-                        bottom: -32px;
-                        
-                    }
-                    &-wrapper {
-                        display: flex;
-                        -webkit-box-align: center;
-                        align-items: center;
-                        -webkit-box-pack: center;
-                        justify-content: center;
-                        width: 94.4px;
-                        height: 94.4px;
-                        @media screen and (min-width: 576px) {
-                            width: 117px;
-                            height: 117px;
-                        }
-                        &-box {
-                            display: flex;
-                            width: 100%;
-                            height: 100%;
-                            background-color: rgb(31, 199, 212);
-                            border: 2px solid rgb(31, 199, 212);
-                            border-radius: 50%;
-                            box-shadow: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);
-                            .dyxOCP {
-                                max-height: 113px;
-                                max-width: 113px;
-                                position: relative;
-                                width: 100%;
-                                .kqjEBp {
-                                    border-radius: 50%;
-                                    height: 100%;
-                                    left: 0px;
-                                    position: absolute;
-                                    top: 0px;
-                                    width: 100%;
-                                    max-width: 100%;
-                                }
-                            }
-                        
-                        }
-                    }
-                }
-                &-flippers{
-                    position: absolute;
-                    bottom: -10px;
-                    left: 50%;
-                    transform: translate(-50%, 0px);
-                    &-wrapper {
-                        display: flex;
-                        -webkit-box-align: center;
-                        align-items: center;
-                        -webkit-box-pack: center;
-                        justify-content: center;
-                        width: 106.4px;
-                        height: 106.4px;
-                        @media screen and (min-width: 576px) {
-                            width: 132px;
-                            height: 132px;
-                        } 
-                        &-box {
-                            display: flex;
-                            width: 100%;
-                            height: 100%;
-                            background-color: rgb(69, 42, 122);
-                            border: 2px solid rgb(69, 42, 122);
-                            border-radius: 50%;
-                            box-shadow: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);;
-                            .txJKz {
-                                max-height: 128px;
-                                max-width: 128px;
-                                position: relative;
-                                width: 100%;
-                                .kqjEBp {
-                                    border-radius: 50%;
-                                    height: 100%;
-                                    left: 0px;
-                                    position: absolute;
-                                    top: 0px;
-                                    width: 100%;
-                                    max-width: 100%;
-                                }
-                            }
-                        }
-                    }
-                }
-                &-cakers {
-                    position: absolute;
-                    bottom: -40px;
-                    right: 6px;
-                    @media screen and (min-width: 576px) {
-                        bottom: -65px;
-                        
-                    }
-                    &-wrapper {
-                        display: flex;
-                        -webkit-box-align: center;
-                        align-items: center;
-                        -webkit-box-pack: center;
-                        justify-content: center;
-                        width: 94.4px;
-                        height: 94.4px;
-                        @media screen and (min-width: 576px) {
-                            width: 117px;
-                            height: 117px;
-                        }
-                        &-box {
-                            display: flex;
-                            width: 100%;
-                            height: 100%;
-                            background-color: rgb(255, 178, 55);
-                            border: 2px solid rgb(255, 178, 55);
-                            border-radius: 50%;
-                            box-shadow: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);                      
-                            .dyxOCP{
-                                max-height: 113px;
-                                max-width: 113px;
-                                position: relative;
-                                width: 100%;
-                                .kqjEBp {
-                                    border-radius: 50%;
-                                    height: 100%;
-                                    left: 0px;
-                                    position: absolute;
-                                    top: 0px;
-                                    width: 100%;
-                                    max-width: 100%;
-                                }
-                            }
-                        }
-                    }
-                }
+            width: 320px;
+            @media screen and (min-width: 576px) {
+                width: 387px;
             }
-            svg {
-                height: auto;
+            &-content {
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                &-teams {
+                    display: flex;
+                    height: 132px;
+                    position: relative;
+                    &-storm {
+                        position: absolute;
+                        bottom: -26px;
+                        left: 6px;
+                        @media screen and (min-width: 576px) {
+                            bottom: -32px;
+                        }
+                        &-wrapper {
+                            display: flex;
+                            -webkit-box-align: center;
+                            align-items: center;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            width: 94.4px;
+                            height: 94.4px;
+                            @media screen and (min-width: 576px) {
+                                width: 117px;
+                                height: 117px;
+                            }
+                            &-box {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgb(31, 199, 212);
+                                border: 2px solid rgb(31, 199, 212);
+                                border-radius: 50%;
+                                box-shadow: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);
+                                .dyxOCP {
+                                    max-height: 113px;
+                                    max-width: 113px;
+                                    position: relative;
+                                    width: 100%;
+                                    .kqjEBp {
+                                        border-radius: 50%;
+                                        height: 100%;
+                                        left: 0px;
+                                        position: absolute;
+                                        top: 0px;
+                                        width: 100%;
+                                        max-width: 100%;
+                                    }
+                                }
+                            
+                            }
+                        }
+                    }
+                    &-flippers{
+                        position: absolute;
+                        bottom: -10px;
+                        left: 50%;
+                        transform: translate(-50%, 0px);
+                        &-wrapper {
+                            display: flex;
+                            -webkit-box-align: center;
+                            align-items: center;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            width: 106.4px;
+                            height: 106.4px;
+                            @media screen and (min-width: 576px) {
+                                width: 132px;
+                                height: 132px;
+                            } 
+                            &-box {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgb(69, 42, 122);
+                                border: 2px solid rgb(69, 42, 122);
+                                border-radius: 50%;
+                                box-shadow: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);;
+                                .txJKz {
+                                    max-height: 128px;
+                                    max-width: 128px;
+                                    position: relative;
+                                    width: 100%;
+                                    .kqjEBp {
+                                        border-radius: 50%;
+                                        height: 100%;
+                                        left: 0px;
+                                        position: absolute;
+                                        top: 0px;
+                                        width: 100%;
+                                        max-width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &-cakers {
+                        position: absolute;
+                        bottom: -40px;
+                        right: 6px;
+                        @media screen and (min-width: 576px) {
+                            bottom: -52px;
+                        }
+                        &-wrapper {
+                            display: flex;
+                            -webkit-box-align: center;
+                            align-items: center;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            width: 94.4px;
+                            height: 94.4px;
+                            @media screen and (min-width: 576px) {
+                                width: 117px;
+                                height: 117px;
+                            }
+                            &-box {
+                                display: flex;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgb(255, 178, 55);
+                                border: 2px solid rgb(255, 178, 55);
+                                border-radius: 50%;
+                                box-shadow: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);                      
+                                .dyxOCP{
+                                    max-height: 113px;
+                                    max-width: 113px;
+                                    position: relative;
+                                    width: 100%;
+                                    .kqjEBp {
+                                        border-radius: 50%;
+                                        height: 100%;
+                                        left: 0px;
+                                        position: absolute;
+                                        top: 0px;
+                                        width: 100%;
+                                        max-width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                svg {
+                    height: auto;
+                    width: 100%;
+                }
             }
         }
+
+        // &-content {
+        //     width: 100%;
+        //     display: flex;
+        //     flex-direction: column;
+        //     &-teams {
+        //         display: flex;
+        //         height: 132px;
+        //         position: relative;
+        //         &-storm {
+        //             position: absolute;
+        //             bottom: -26px;
+        //             left: 6px;
+        //             @media screen and (min-width: 576px) {
+        //                 bottom: -32px;
+        //             }
+        //             &-wrapper {
+        //                 display: flex;
+        //                 -webkit-box-align: center;
+        //                 align-items: center;
+        //                 -webkit-box-pack: center;
+        //                 justify-content: center;
+        //                 width: 94.4px;
+        //                 height: 94.4px;
+        //                 @media screen and (min-width: 576px) {
+        //                     width: 117px;
+        //                     height: 117px;
+        //                 }
+        //                 &-box {
+        //                     display: flex;
+        //                     width: 100%;
+        //                     height: 100%;
+        //                     background-color: rgb(31, 199, 212);
+        //                     border: 2px solid rgb(31, 199, 212);
+        //                     border-radius: 50%;
+        //                     box-shadow: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);
+        //                     .dyxOCP {
+        //                         max-height: 113px;
+        //                         max-width: 113px;
+        //                         position: relative;
+        //                         width: 100%;
+        //                         .kqjEBp {
+        //                             border-radius: 50%;
+        //                             height: 100%;
+        //                             left: 0px;
+        //                             position: absolute;
+        //                             top: 0px;
+        //                             width: 100%;
+        //                             max-width: 100%;
+        //                         }
+        //                     }
+                        
+        //                 }
+        //             }
+        //         }
+        //         &-flippers{
+        //             position: absolute;
+        //             bottom: -10px;
+        //             left: 50%;
+        //             transform: translate(-50%, 0px);
+        //             &-wrapper {
+        //                 display: flex;
+        //                 -webkit-box-align: center;
+        //                 align-items: center;
+        //                 -webkit-box-pack: center;
+        //                 justify-content: center;
+        //                 width: 106.4px;
+        //                 height: 106.4px;
+        //                 @media screen and (min-width: 576px) {
+        //                     width: 132px;
+        //                     height: 132px;
+        //                 } 
+        //                 &-box {
+        //                     display: flex;
+        //                     width: 100%;
+        //                     height: 100%;
+        //                     background-color: rgb(69, 42, 122);
+        //                     border: 2px solid rgb(69, 42, 122);
+        //                     border-radius: 50%;
+        //                     box-shadow: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);;
+        //                     .txJKz {
+        //                         max-height: 128px;
+        //                         max-width: 128px;
+        //                         position: relative;
+        //                         width: 100%;
+        //                         .kqjEBp {
+        //                             border-radius: 50%;
+        //                             height: 100%;
+        //                             left: 0px;
+        //                             position: absolute;
+        //                             top: 0px;
+        //                             width: 100%;
+        //                             max-width: 100%;
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         &-cakers {
+        //             position: absolute;
+        //             bottom: -40px;
+        //             right: 6px;
+        //             @media screen and (min-width: 576px) {
+        //                 bottom: -52px;
+        //             }
+        //             &-wrapper {
+        //                 display: flex;
+        //                 -webkit-box-align: center;
+        //                 align-items: center;
+        //                 -webkit-box-pack: center;
+        //                 justify-content: center;
+        //                 width: 94.4px;
+        //                 height: 94.4px;
+        //                 @media screen and (min-width: 576px) {
+        //                     width: 117px;
+        //                     height: 117px;
+        //                 }
+        //                 &-box {
+        //                     display: flex;
+        //                     width: 100%;
+        //                     height: 100%;
+        //                     background-color: rgb(255, 178, 55);
+        //                     border: 2px solid rgb(255, 178, 55);
+        //                     border-radius: 50%;
+        //                     box-shadow: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);                      
+        //                     .dyxOCP{
+        //                         max-height: 113px;
+        //                         max-width: 113px;
+        //                         position: relative;
+        //                         width: 100%;
+        //                         .kqjEBp {
+        //                             border-radius: 50%;
+        //                             height: 100%;
+        //                             left: 0px;
+        //                             position: absolute;
+        //                             top: 0px;
+        //                             width: 100%;
+        //                             max-width: 100%;
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     svg {
+        //         height: auto;
+        //         width: 100%;
+        //     }
+        // }
 
         &-graph {
             position: relative;

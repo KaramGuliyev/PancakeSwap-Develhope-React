@@ -297,29 +297,31 @@ function CompetitionPage() {
                     <div className="competition-ranks-wrapper-box-inner">
                       <div className="ranks-content">
                         <div className="ranks-content-bench">
-                          <div className="ranks-content-bench-content">
-                            <div className="ranks-content-bench-content-teams">
-                              <div className="ranks-content-bench-content-teams-storm">
-                                <div className="ranks-content-bench-content-teams-storm-wrapper">
-                                  <div className="ranks-content-bench-content-teams-storm-wrapper-box">
+                          <div className="ranks-content-bench-wrapper">
+                              <div className="ranks-content-bench-wrapper-content">
+                            
+                            <div className="ranks-content-bench-wrapper-content-teams">
+                              <div className="ranks-content-bench-wrapper-content-teams-storm">
+                                <div className="ranks-content-bench-wrapper-content-teams-storm-wrapper">
+                                  <div className="ranks-content-bench-wrapper-content-teams-storm-wrapper-box">
                                   <div class="dyxOCP">
                                     <img src="https://pancakeswap.finance/images/teams/syrup-storm-lg.png" class="kqjEBp"/>
                                   </div>
                                   </div>
                                 </div>
                               </div>
-                              <div className="ranks-content-bench-content-teams-flippers">
-                                <div className="ranks-content-bench-content-teams-flippers-wrapper">
-                                  <div className="ranks-content-bench-content-teams-flippers-wrapper-box">
+                              <div className="ranks-content-bench-wrapper-content-teams-flippers">
+                                <div className="ranks-content-bench-wrapper-content-teams-flippers-wrapper">
+                                  <div className="ranks-content-bench-wrapper-content-teams-flippers-wrapper-box">
                                   <div class="txJKz">
                                     <img src="https://pancakeswap.finance/images/teams/fearsome-flippers-lg.png" class="kqjEBp"/>
                                   </div>
                                   </div>
                                 </div>
                               </div>
-                              <div className="ranks-content-bench-content-teams-cakers">
-                                <div className="ranks-content-bench-content-teams-cakers-wrapper">
-                                  <div className="ranks-content-bench-content-teams-cakers-wrapper-box">
+                              <div className="ranks-content-bench-wrapper-content-teams-cakers">
+                                <div className="ranks-content-bench-wrapper-content-teams-cakers-wrapper">
+                                  <div className="ranks-content-bench-wrapper-content-teams-cakers-wrapper-box">
                                   <div class="dyxOCP">
                                     <img src="https://pancakeswap.finance/images/teams/chaotic-cakers-lg.png" class="kqjEBp"/>
                                   </div>
@@ -357,6 +359,8 @@ function CompetitionPage() {
                                 <div class="rank-details-box-participants">Participants</div>
                               </div>
                             </div>
+                          </div>
+                          
                           </div>
                           <div className="ranks-content-bench-graph">
                             <div className="ranks-content-bench-graph-total">
