@@ -179,10 +179,93 @@
     width: 70%;
     display: flex;
     flex-direction: column;
+
     margin-left: auto;
     margin-right: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
-    .secondList {
+    .upperConteiner {
+      background: #27262c;
+      border-radius: 24px;
+      color: $colors-text;
+      overflow: hidden;
+      position: relative;
+      padding: 1px 1px 3px;
+      margin-top: 16px;
+
+      .upContHeader {
+        color: $colors-text;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-left: 16px;
+        margin-top: 8px;
+        font-size: 16px;
+      }
+
+      .upContMovingBar {
+        width: 100%;
+        overflow-x: auto;
+        padding: 16px 0px;
+        white-space: nowrap;
+        display: flex;
+        flex-direction: row;
+
+        animation: slide 10s linear infinite;
+
+        .movingBarBoxes {
+          border: 1px solid $colors-cardBorder;
+          border-radius: 24px;
+          padding: 16px;
+          display: flex;
+          flex-direction: row;
+          margin-left: 16px;
+          background-color: #27262c;
+
+          .innerBox {
+            display: flex;
+            flex-direction: row;
+
+            min-width: 150px;
+
+            .writings {
+              display: flex;
+              flex-direction: column;
+              margin-left: 12px;
+              .smallWritings {
+                display: flex;
+                flex-direction: row;
+                .left {
+                  color: $colors-text;
+                  font-weight: 400;
+                  margin-right: 6px;
+                  font-size: 14px;
+                  line-height: 16px;
+                }
+                .right {
+                  font-size: 14px;
+                  line-height: 16px;
+                  font-weight: 400;
+                  color: $colors-failure;
+                }
+                .rightPositive {
+                  font-size: 14px;
+                  line-height: 16px;
+                  font-weight: 400;
+                  color: $colors-success;
+                }
+              }
+            }
+            img {
+              height: 32px;
+              width: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    .table {
       width: 100%;
       background-color: $colors-backgroundAlt;
       border-radius: 24px;
@@ -190,6 +273,81 @@
       flex-direction: column;
       padding-top: 16px;
       gap: 16px;
+
+      .firstLine {
+        color: $colors-textSubtle;
+        display: grid;
+        gap: 1em;
+        -webkit-box-align: center;
+        align-items: center;
+        grid-template-columns: 20px 3fr repeat(4, 1fr);
+        padding: 0px 24px;
+        .firstLineElSvg {
+          display: flex;
+          flex-direction: row;
+          button {
+            padding: 4px 8px;
+            border-radius: 8px;
+            width: 25px;
+            height: 25px;
+            margin-left: 5px;
+            border-color: $colors-cardBorder;
+            background: #3c3742;
+
+            cursor: pointer;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+              align-self: center;
+              fill: $colors-text;
+              color: $colors-text;
+              flex-shrink: 0;
+            }
+          }
+        }
+        img {
+          height: 24px;
+          width: 24px;
+        }
+      }
+
+      .lines {
+        display: grid;
+        gap: 1em;
+        -webkit-box-align: center;
+        align-items: center;
+        grid-template-columns: 20px 3fr repeat(4, 1fr);
+        padding: 0px 24px;
+        color: $colors-text;
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+
+        .nameLogo {
+          display: flex;
+          flex-direction: row;
+          img {
+            height: 24px;
+            width: 24px;
+          }
+          .name {
+            margin-left: 8px;
+          }
+          .shortName {
+            color: $colors-text99;
+            margin-left: 8px;
+          }
+        }
+
+        .priceChange {
+          color: $colors-success;
+        }
+        .priceChangeNegative {
+          color: $colors-failure;
+        }
+      }
 
       .lastLine {
         width: 100%;
@@ -201,11 +359,19 @@
         margin-top: 0.2em;
         margin-bottom: 1.2em;
         color: $colors-text;
-        .lastLineLeftSvg {
+        .leftSvg {
           height: 24px;
+          padding-left: 20px;
+          padding-right: 20px;
+          fill: $colors-textDisabled;
+          color: #666171;
         }
-        .lastLineRightSvg {
+        .rightSvg {
           height: 24px;
+          padding-left: 20px;
+          padding-right: 20px;
+          fill: $colors-primary;
+          color: $colors-primary;
         }
       }
 
@@ -214,156 +380,17 @@
         width: 100%;
         background-color: $colors-cardBorder;
       }
-      a {
-        color: $colors-text;
-        font-weight: 400;
-        line-height: 1.5;
-        font-size: 16px;
-      }
-
-      .secondListLinks {
-        display: grid;
-        gap: 1em;
-        -webkit-box-align: center;
-        align-items: center;
-        grid-template-columns: 20px 3.5fr repeat(5, 1fr);
-        padding: 0px 24px;
-        .iconsNames {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          .icons {
-            display: flex;
-            flex-direction: row;
-            -webkit-box-align: center;
-            align-items: center;
-            width: 32px;
-            height: 24px;
-
-            img {
-              height: 16px;
-              width: 16px;
-              border-radius: 16px;
-            }
-          }
-          .pairs {
-            font-weight: 400;
-            line-height: 1.5;
-            margin-left: 8px;
-            font-size: 16px;
-          }
-        }
-      }
-
-      .line1 {
-        color: $colors-secondary;
-        font-weight: 600;
-        line-height: 1.5;
-        text-transform: uppercase;
-        font-size: 12px;
-        display: grid;
-        gap: 1em;
-        -webkit-box-align: center;
-        align-items: center;
-        grid-template-columns: 20px 3.5fr repeat(5, 1fr);
-        padding: 0px 24px;
-      }
     }
-    .firstTitle {
+    .tokensTitle {
       margin-top: 40px;
       margin-bottom: 16px;
       color: $colors-text;
       font-weight: 600;
       line-height: 1.1;
       font-size: 24px;
-    }
-    .secondTitle {
-      margin-top: 40px;
-      margin-bottom: 16px;
-      color: $colors-text;
-      font-weight: 600;
-      line-height: 1.1;
-      font-size: 24px;
-    }
 
-    .thirdTitle {
-      margin-top: 40px;
-      margin-bottom: 16px;
-      color: $colors-text;
-      font-weight: 600;
-      line-height: 1.1;
-      font-size: 24px;
-    }
+      //   ctrl + /
 
-    .fourthTitle {
-      margin-top: 40px;
-      margin-bottom: 16px;
-      color: $colors-text;
-      font-weight: 600;
-      line-height: 1.1;
-      font-size: 24px;
-    }
-    .firstList {
-      width: 100%;
-      background-color: $colors-backgroundAlt;
-      border-radius: 24px;
-      display: flex;
-      flex-direction: column;
-      padding-top: 16px;
-      gap: 16px;
-      .borderLines {
-        height: 1px;
-        width: 100%;
-        background-color: $colors-cardBorder;
-      }
-      a {
-        color: $colors-text;
-        font-weight: 400;
-        line-height: 1.5;
-        font-size: 16px;
-      }
-      .line1 {
-        color: $colors-secondary;
-        font-weight: 600;
-        line-height: 1.5;
-        text-transform: uppercase;
-        font-size: 12px;
-        display: grid;
-        gap: 1em;
-        -webkit-box-align: center;
-        align-items: center;
-        padding: 0px 24px;
-        grid-template-columns: 20px 3fr repeat(4, 1fr);
-      }
-      .listLinks {
-        display: grid;
-        gap: 1em;
-        -webkit-box-align: center;
-        align-items: center;
-        padding: 0px 24px;
-        grid-template-columns: 20px 3fr repeat(4, 1fr);
-        font-size: 100%;
-
-        .elementsLeft {
-          display: flex;
-
-          //   ctrl + /
-          flex-direction: row;
-        }
-        .elementsRight {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          display: contents;
-
-          .priceChanges {
-            color: $colors-success;
-          }
-          .priceChangesNegative {
-            color: $colors-failure;
-          }
-        }
-      }
       .lastLine {
         width: 100%;
         display: flex;
