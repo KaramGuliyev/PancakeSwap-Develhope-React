@@ -6,23 +6,27 @@ export default function PoolsBody() {
     {
       img: "./assets/Pools/swap.svg",
       headerDesc: "Stake, Earn – And more!",
-      APY: "2.01%",
-      APR: "Up to 43.17%",
-      stakeAmount: "257,260,829 CAKE",
+      APY: `${Math.floor(Math.random() * 1000) / 100}%`,
+      APR: `Up to ${Math.floor(Math.random() * 10000) / 100}%`,
+      stakeAmount: `${Math.floor(Math.random() * 1000000000000)}`,
     },
     {
       img: "./assets/Pools/swap.svg",
       headerDesc: "Stake, Earn – And more!",
-      APY: "2.01%",
-      APR: "Up to 43.17%",
-      stakeAmount: "257,260,829 CAKE",
+      APY: `${Math.floor(Math.random() * 1000) / 100}%`,
+
+      APR: `Up to ${Math.floor(Math.random() * 10000) / 100}%`,
+
+      stakeAmount: `${Math.floor(Math.random() * 1000000000000)}`,
     },
     {
       img: "./assets/Pools/swap.svg",
       headerDesc: "Stake, Earn – And more!",
-      APY: "2.01%",
-      APR: "Up to 43.17%",
-      stakeAmount: "257,260,829 CAKE",
+      APY: `${Math.floor(Math.random() * 1000) / 100}%`,
+
+      APR: `Up to ${Math.floor(Math.random() * 10000) / 100}%`,
+
+      stakeAmount: `${Math.floor(Math.random() * 1000000000000)}`,
     },
   ];
 
@@ -35,16 +39,13 @@ export default function PoolsBody() {
     const rabbit = rabbitRef.current;
     const handleScroll = () => {
       const rabbitPosition = rabbit.offsetTop;
-      if (
-        window.pageYOffset > rabbitPosition / 2 &&
-        infiniteScroll < 8
-      ) {
+      if (window.pageYOffset > rabbitPosition / 2 && infiniteScroll < 8) {
         let tempObj = {
           img: "./assets/Pools/swap.svg",
           headerDesc: "Stake, Earn – And more!",
-          APY: "2.01%",
-          APR: "Up to 43.17%",
-          stakeAmount: "257,260,829 CAKE",
+          APY: `${Math.floor(Math.random() * 1000) / 100}%`,
+          APR: `Up to ${Math.floor(Math.random() * 10000) / 100}%`,
+          stakeAmount: `${Math.floor(Math.random() * 1000000000000)}`,
         };
         setPoolsData([...poolsData, tempObj]);
         setInfiniteScroll(infiniteScroll + 1);
@@ -76,9 +77,7 @@ export default function PoolsBody() {
         <div class="poolsHeader">
           <div class="headerContents">
             <h1 class="headerTitle">Syrup Pools</h1>
-            <h2 class="headerDesc">
-              Just stake some tokens to earn.
-            </h2>
+            <h2 class="headerDesc">Just stake some tokens to earn.</h2>
             <h2 class="headerDesc">High APR, low risk.</h2>
           </div>
         </div>
@@ -129,30 +128,15 @@ export default function PoolsBody() {
                 <div class="dropdownTitle">SORT BY</div>
                 <div class="dropdownField">
                   <div class="activeDropdown">Hot</div>
-                  <img
-                    src="./assets/Pools/dropdown.svg"
-                    class="dropdownSymbol"
-                    alt=""
-                  />
+                  <img src="./assets/Pools/dropdown.svg" class="dropdownSymbol" alt="" />
                 </div>
                 <div style={{ display: "none" }}></div>
               </div>
               <div class="search">
                 <div class="searchTitle">SEARCH</div>
                 <div class="searchField">
-                  <input
-                    type="text"
-                    class="searchField"
-                    placeholder="Search Pools"
-                    name=""
-                    id=""
-                  />
-                  <img
-                    src="./assets/Pools/search.svg"
-                    class="searchSymbol"
-                    width="20px"
-                    alt=""
-                  />
+                  <input type="text" class="searchField" placeholder="Search Pools" name="" id="" />
+                  <img src="./assets/Pools/search.svg" class="searchSymbol" width="20px" alt="" />
                 </div>
               </div>
             </div>
@@ -164,30 +148,17 @@ export default function PoolsBody() {
                   class="row"
                   key={i}
                   style={{
-                    borderBottom:
-                      i === poolsData.length - 1
-                        ? 0
-                        : "2px solid rgb(82, 75, 99)",
+                    borderBottom: i === poolsData.length - 1 ? 0 : "2px solid rgb(82, 75, 99)",
                   }}
                 >
                   <div class="column1">
                     <div class="imgContainer">
-                      <img
-                        src={el.img}
-                        class="coinImg"
-                        alt=""
-                      />
-                      <img
-                        src="./assets/Pools/cycle.svg"
-                        class="cycle"
-                        alt=""
-                      />
+                      <img src={el.img} class="coinImg" alt="" />
+                      <img src="./assets/Pools/cycle.svg" class="cycle" alt="" />
                     </div>
                     <div class="desc">
                       <div class="header">Stake CAKE</div>
-                      <div class="headerDesc">
-                        {el.headerDesc}
-                      </div>
+                      <div class="headerDesc">{el.headerDesc}</div>
                     </div>
                   </div>
                   <div class="column3">
@@ -202,32 +173,18 @@ export default function PoolsBody() {
                   <div class="column4">
                     <div class="desc">
                       <div class="header">Flexible APY</div>
-                      <div
-                        class="headerDesc"
-                        style={{ cursor: "pointer" }}
-                      >
+                      <div class="headerDesc" style={{ cursor: "pointer" }}>
                         <div class="subMainDesc">{el.APY}</div>
-                        <img
-                          src="./assets/Pools/calc.svg"
-                          class="descImg"
-                          alt=""
-                        />
+                        <img src="./assets/Pools/calc.svg" class="descImg" alt="" />
                       </div>
                     </div>
                   </div>
                   <div class="column5">
                     <div class="desc">
                       <div class="header">Locked APR</div>
-                      <div
-                        class="headerDesc"
-                        style={{ cursor: "pointer" }}
-                      >
+                      <div class="headerDesc" style={{ cursor: "pointer" }}>
                         <div class="subMainDesc">{el.APR}</div>
-                        <img
-                          src="./assets/Pools/calc.svg"
-                          class="descImg"
-                          alt=""
-                        />
+                        <img src="./assets/Pools/calc.svg" class="descImg" alt="" />
                       </div>
                     </div>
                   </div>
@@ -235,26 +192,17 @@ export default function PoolsBody() {
                     <div class="desc">
                       <div class="header">Total staked</div>
                       <div class="headerDesc">
-                        <div
-                          class="subMainDesc"
-                          style={{ cursor: "pointer" }}
-                        >
+                        <div class="subMainDesc" style={{ cursor: "pointer" }}>
                           {el.stakeAmount}
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="column7">
-                    <div
-                      class="desc"
-                      style={{ cursor: "pointer" }}
-                    >
+                    <div class="desc" style={{ cursor: "pointer" }}>
                       <div class="header">Details</div>
                       <div class="headerDesc">
-                        <img
-                          src="./assets/Pools/tableArrowDown.svg"
-                          alt=""
-                        />
+                        <img src="./assets/Pools/tableArrowDown.svg" alt="" />
                       </div>
                     </div>
                   </div>
@@ -263,11 +211,7 @@ export default function PoolsBody() {
             })}
           </div>
           <div class="poolsFooter" ref={rabbitRef}>
-            <img
-              src="./assets/Pools/3d-syrup-bunnies.png"
-              alt=""
-              id="rabbit"
-            />
+            <img src="./assets/Pools/3d-syrup-bunnies.png" alt="" id="rabbit" />
           </div>
         </div>
       </div>
